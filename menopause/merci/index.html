@@ -18,13 +18,13 @@
 <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet">
 <style>
   :root{
-    --rose:#E84070; --coral:#E8634A; --amber:#F5A623; --green:#52C97F;
-    --cream:#FFF8F3; --card:#FEF0E7; --text:#2D1B1B; --muted:#9B8B8A; --border:#F0DDD4;
-    --grad-cta:linear-gradient(135deg,#E8634A 0%,#E84070 100%);
-    --grad-hero:linear-gradient(135deg,#F5A623 0%,#E84070 60%,#C22D60 100%);
-    --sh-sm:0 2px 8px rgba(45,27,27,.08);
-    --sh-md:0 4px 16px rgba(45,27,27,.12);
-    --sh-btn:0 4px 14px rgba(232,64,112,.32);
+    --rose:#A8823F; --coral:#C9A15C; --amber:#D4AF6A; --green:#6E8B5B;
+    --cream:#F7F3EA; --card:#FFFFFF; --text:#332E26; --muted:#8C8171; --border:#E7DFCE;
+    --grad-cta:linear-gradient(135deg,#C9A15C 0%,#8A6C33 100%);
+    --grad-hero:linear-gradient(150deg,#4A3A2C 0%,#2E241D 58%,#241B1B 100%);
+    --sh-sm:0 2px 8px rgba(51,46,38,.08);
+    --sh-md:0 8px 24px rgba(51,46,38,.12);
+    --sh-btn:0 8px 22px rgba(138,108,51,.34);
   }
   *{margin:0;padding:0;box-sizing:border-box}
   body{font-family:'Nunito',ui-rounded,system-ui,sans-serif;background:var(--cream);color:var(--text);line-height:1.5;-webkit-font-smoothing:antialiased}
@@ -43,13 +43,13 @@
   .card-label{font-size:12px;font-weight:800;text-transform:uppercase;letter-spacing:1px;color:var(--rose);margin-bottom:10px;display:flex;align-items:center;gap:7px}
   .card-label svg{width:17px;height:17px;flex-shrink:0}
   .card h2{font-size:21px;font-weight:800;color:var(--text);margin-bottom:8px;line-height:1.25}
-  .card p{font-size:15px;color:#6b5b59;line-height:1.6}
+  .card p{font-size:15px;color:#7A7062;line-height:1.6}
   .billing{background:#FFFAF0;border:2px solid var(--amber);border-radius:20px;padding:18px;margin-top:-14px;position:relative;z-index:2;box-shadow:var(--sh-md)}
   .billing .b-head{display:flex;align-items:center;gap:10px;margin-bottom:10px}
   .billing .b-ic{width:38px;height:38px;background:var(--amber);border-radius:11px;display:flex;align-items:center;justify-content:center;flex-shrink:0}
   .billing .b-ic svg{width:21px;height:21px}
   .billing .b-title{font-size:15px;font-weight:800;color:#9a6a09;line-height:1.25}
-  .billing p{font-size:13.5px;color:#6b5b59;line-height:1.55;margin-bottom:12px}
+  .billing p{font-size:13.5px;color:#7A7062;line-height:1.55;margin-bottom:12px}
   .descriptor{background:#fff;border:2px dashed var(--amber);border-radius:12px;padding:13px 14px;text-align:center}
   .descriptor .d-label{font-size:10.5px;text-transform:uppercase;letter-spacing:1px;color:var(--muted);font-weight:700;margin-bottom:5px}
   .descriptor .d-val{font-size:18px;font-weight:800;color:var(--text);font-family:ui-monospace,'Courier New',monospace;letter-spacing:.5px;word-break:break-all}
@@ -58,7 +58,7 @@
   .cta:hover{transform:translateY(-2px);box-shadow:0 6px 20px rgba(232,64,112,.42)}
   .guarantee{display:flex;align-items:center;gap:13px;background:rgba(82,201,127,.10);border:1.5px solid rgba(82,201,127,.35);border-radius:16px;padding:15px;margin-top:16px}
   .guarantee .g-ic{width:46px;height:46px;flex-shrink:0}
-  .guarantee h4{font-size:14.5px;font-weight:800;color:#1F7A48;margin-bottom:2px}
+  .guarantee h4{font-size:14.5px;font-weight:800;color:#4E6B3E;margin-bottom:2px}
   .guarantee p{font-size:13px;color:#3d7a57;line-height:1.45}
   .step{display:flex;gap:14px;padding:14px 0}
   .step+.step{border-top:1px solid var(--border)}
@@ -74,7 +74,7 @@
   .faq-q .tg{width:24px;height:24px;background:var(--card);border-radius:50%;display:flex;align-items:center;justify-content:center;flex-shrink:0;transition:transform .2s;font-size:15px;color:var(--rose);font-weight:800}
   .faq[open] .faq-q .tg{transform:rotate(45deg)}
   .faq-a{font-size:13.5px;color:var(--muted);line-height:1.6;padding-top:10px}
-  .faq-a strong{color:#6b5b59}
+  .faq-a strong{color:#7A7062}
   .support{background:var(--card);border-radius:20px;padding:22px 20px;text-align:center;margin-top:16px}
   .support .s-emoji{font-size:30px;margin-bottom:8px}
   .support h4{font-size:16px;font-weight:800;color:var(--text);margin-bottom:5px}
@@ -93,7 +93,7 @@
 <div class="wrap">
 
   <div class="brand">
-    <img src="../img/logo.webp" alt="NexGen Ménopause" width="138" height="150">
+    <img src="../img/logo.webp" alt="NexGen Ménopause" width="136" height="150">
   </div>
 
   <div class="hero">

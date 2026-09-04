@@ -1,11 +1,11 @@
 /* ───────────────────────────────────────────────────────────────
    Gelatin App — estilo das páginas legais (design system do app)
-   Nunito · cream #FFF8F3 · rose/amber · UI-DESIGN-SPEC §1
+   Nunito · cream #F7F3EA · dore/marron · paleta do Stylo Maison App
    ─────────────────────────────────────────────────────────────── */
 :root{
-  --rose:#E84070; --coral:#E8634A; --amber:#F5A623; --green:#52C97F;
-  --cream:#FFF8F3; --card:#FEF0E7; --text:#2D1B1B; --muted:#9B8B8A; --border:#F0DDD4;
-  --grad-cta:linear-gradient(135deg,#E8634A 0%,#E84070 100%);
+  --rose:#A8823F; --coral:#C9A15C; --amber:#D4AF6A; --green:#6E8B5B;
+  --cream:#F7F3EA; --card:#FFFFFF; --text:#332E26; --muted:#8C8171; --border:#E7DFCE;
+  --grad-cta:linear-gradient(135deg,#C9A15C 0%,#8A6C33 100%);
 }
 *{margin:0;padding:0;box-sizing:border-box}
 body{font-family:'Nunito',ui-rounded,system-ui,sans-serif;background:var(--cream);color:var(--text);line-height:1.65;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale}
@@ -37,7 +37,7 @@ a:hover{text-decoration:underline}
 .callout h3{margin:0 0 6px;color:#9a6a09;font-size:15px}
 .callout p:last-child{margin-bottom:0}
 .guarantee-box{background:rgba(82,201,127,.10);border:1.5px solid rgba(82,201,127,.35);border-radius:14px;padding:16px 18px;margin:18px 0}
-.guarantee-box h3{margin:0 0 6px;color:#1F7A48;font-size:15px}
+.guarantee-box h3{margin:0 0 6px;color:#4E6B3E;font-size:15px}
 .guarantee-box p:last-child{margin-bottom:0}
 .descriptor-inline{display:inline-block;background:var(--card);border:1px dashed var(--amber);border-radius:8px;padding:2px 10px;font-family:ui-monospace,'Courier New',monospace;font-weight:700;font-size:14px}
 
