@@ -4,8 +4,8 @@
    ─────────────────────────────────────────────────────────────── */
 :root{
   --rose:#A8823F; --coral:#C9A15C; --amber:#D4AF6A; --green:#6E8B5B;
-  --cream:#F7F3EA; --card:#FFFFFF; --text:#332E26; --muted:#8C8171; --border:#E7DFCE;
-  --grad-cta:linear-gradient(135deg,#C9A15C 0%,#8A6C33 100%);
+  --cream:#F7F3EA; --card:#FFFFFF; --text:#332E26; --muted:#6A6153; --border:#E7DFCE;
+  --grad-cta:linear-gradient(135deg,#8A6C33 0%,#6E5527 100%);
 }
 *{margin:0;padding:0;box-sizing:border-box}
 body{font-family:'Nunito',ui-rounded,system-ui,sans-serif;background:var(--cream);color:var(--text);line-height:1.65;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale}

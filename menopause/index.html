@@ -22,8 +22,8 @@
 <style>
   :root{
     --rose:#A8823F; --coral:#C9A15C; --amber:#D4AF6A; --green:#6E8B5B;
-    --cream:#F7F3EA; --card:#FFFFFF; --text:#332E26; --muted:#8C8171; --border:#E7DFCE;
-    --grad-cta:linear-gradient(135deg,#C9A15C 0%,#8A6C33 100%);
+    --cream:#F7F3EA; --card:#FFFFFF; --text:#332E26; --muted:#6A6153; --border:#E7DFCE;
+    --grad-cta:linear-gradient(135deg,#8A6C33 0%,#6E5527 100%);
     --grad-hero:linear-gradient(150deg,#4A3A2C 0%,#2E241D 58%,#241B1B 100%);
     --grad-soft:linear-gradient(160deg,#FBF7EE 0%,#F3EDE0 100%);
     --sh-sm:0 2px 8px rgba(51,46,38,.08); --sh-md:0 8px 24px rgba(51,46,38,.12);
@@ -52,7 +52,7 @@
   @keyframes pulse{0%{box-shadow:0 0 0 0 rgba(255,255,255,.6)}70%{box-shadow:0 0 0 8px rgba(255,255,255,0)}100%{box-shadow:0 0 0 0 rgba(255,255,255,0)}}
   .hero h1{font-size:33px;font-weight:900;line-height:1.1;letter-spacing:-.5px;margin-bottom:11px}
   .hero .deck{font-size:15.5px;font-weight:600;color:rgba(255,255,255,.95);line-height:1.5;max-width:36ch;margin:0 auto}
-  .device-stage{display:flex;justify-content:center;margin:26px 0 6px}
+  .device-stage{display:flex;justify-content:center;margin:26px 0 6px}@media(max-width:480px){.device-img{width:auto;max-height:40vh;max-width:78%}.device-stage{margin:18px 0 4px}}
   .device-img{width:312px;max-width:82%;height:auto;display:block;filter:drop-shadow(0 26px 42px rgba(45,27,27,.34));animation:floatY 6.5s ease-in-out infinite}
   @keyframes floatY{0%,100%{transform:translateY(0)}50%{transform:translateY(-10px)}}
   .trust{display:flex;justify-content:center;gap:8px;flex-wrap:wrap;margin-top:14px}
@@ -106,7 +106,7 @@
   .who-col.yes h4{color:#4E6B3E}.who-col.no h4{color:var(--muted)}
   .who-col ul{list-style:none;display:grid;gap:9px}
   .who-col li{display:flex;gap:9px;align-items:flex-start;font-size:13.5px;color:#6A6153;line-height:1.45}
-  .who-col li svg{flex-shrink:0;width:17px;height:17px;margin-top:1px}
+  .who-col svg{flex-shrink:0;width:17px;height:17px}.who-col li svg{margin-top:1px}
   .who-col.yes li svg{color:var(--green)}.who-col.no li svg{color:var(--muted)}
 
   /* COMPARE */
@@ -147,7 +147,7 @@
   /* DISCLAIMER */
   .disclaimer{background:#FBF4EF;border:1px solid var(--border);border-radius:16px;padding:17px 18px;margin-top:16px}
   .disclaimer h4{font-size:11.5px;font-weight:800;text-transform:uppercase;letter-spacing:.8px;color:var(--muted);margin-bottom:7px}
-  .disclaimer p{font-size:12.5px;color:#8a7a78;line-height:1.55}
+  .disclaimer p{font-size:12.5px;color:#6A6153;line-height:1.55}
 
   /* FAQ */
   .faqs{margin-top:16px;background:#fff;border-radius:20px;padding:6px 20px;box-shadow:var(--sh-sm)}
@@ -175,7 +175,7 @@
   .support a svg{width:16px;height:16px}
   .foot{text-align:center;padding:26px 8px 0}
   .foot p{font-size:12px;color:var(--muted);line-height:1.6;margin-top:10px}
-  .foot-links a{color:var(--rose);font-weight:800;text-decoration:none}
+  .foot a{color:var(--rose);font-weight:800;text-decoration:none}.foot-links a{display:inline-block;padding:11px 7px}
 .cta-decline{display:inline-block;margin-top:13px;font-size:13.5px;font-weight:700;color:inherit;opacity:.72;text-decoration:underline;text-underline-offset:2px}</style>
 <!-- Digistore24 promocode -->
 <script src="https://www.digistore24-scripts.com/service/digistore.js"></script>
