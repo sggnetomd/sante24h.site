@@ -416,9 +416,9 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <p class="total rv">L'application complète&nbsp;: <s>57 €</s> &nbsp;&rarr;&nbsp; <strong>37 € aujourd'hui</strong></p>
 
     <!-- ═══ 6 · CE QUI N'ENTRE PAS (l'offre complète garde sa valeur) ═══
-         COLE_AQUI_LES_NOMS_DES_BONUS_UP1 — si la page UP1 nomme les modules
-         bonus, reprendre ici les noms exacts, un par un. Tant qu'ils ne sont
-         pas confirmés, on reste générique : jamais de bonus inventé. -->
+         Les modules bonus sont nommés sur la page UP1 : sel rose, lipo maison,
+         chocolat minceur. Ici on reste générique à dessein — on dit ce qui est
+         retiré, pas ce qui est offert. Jamais de bonus inventé. -->
     <div class="excluded rv">
       <h4>Pour être honnête avec toi</h4>
       <p>Cette version <strong>ne comprend pas les modules bonus</strong> de l'accès complet à 57 €. Ils restent réservés à celles qui ont pris le pack entier. Ici, tu prends le cœur de l'application&nbsp;: le protocole, les recettes, les guides et le suivi. C'est exactement ce qu'il faut pour commencer demain matin.</p>
@@ -535,6 +535,16 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
     /* ── 4 · Révélation au défilement ── */
     var blocks = document.querySelectorAll('.rv');
+
+    /* Filet de sécurité AVANT tout le reste : il est armé d'abord, puis on masque.
+       Si on masquait d'abord (body.js-reveal met les .rv à opacity:0) et qu'une
+       erreur survenait avant ce setTimeout, le prix et le bouton resteraient
+       invisibles pour toujours — une page sans CTA. Dans cet ordre, le pire cas
+       est un affichage sans animation. */
+    setTimeout(function(){
+      for(var k=0;k<blocks.length;k++) blocks[k].classList.add('on');
+    }, 3000);
+
     if(reduce || !('IntersectionObserver' in window)){
       for(var i=0;i<blocks.length;i++) blocks[i].classList.add('on');
       return;
@@ -546,11 +556,6 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       });
     }, {rootMargin:'0px 0px -12% 0px', threshold:0.05});
     for(var j=0;j<blocks.length;j++) io.observe(blocks[j]);
-
-    /* Filet de sécurité : si quelque chose casse, tout s'affiche au bout de 3 s */
-    setTimeout(function(){
-      for(var k=0;k<blocks.length;k++) blocks[k].classList.add('on');
-    }, 3000);
   }
 
   /* ════════ ÉCRAN DE RÉVÉLATION DE LA REMISE ════════ */
@@ -637,7 +642,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
      ⚠️ Le tableau de bord FR n'est pas encore confirmé : remplacer le marqueur
      ci-dessous par le pixelId du compte français avant la mise en ligne. -->
 <script>
-  window.pixelId = "COLE_AQUI_O_PIXELID_UTMIFY_FR";
+  window.pixelId = "6aa4cc4967d779cc55f686cf";
   var a = document.createElement("script");
   a.setAttribute("async", "");
   a.setAttribute("defer", "");
