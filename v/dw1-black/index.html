@@ -1,351 +1,667 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="fr">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Accélérateur Intestinal 7X — Recettes, habitudes et protocole de 30 jours</title>
-<meta name="description" content="Accélérateur Intestinal 7X est une application web de contenu éducatif : recettes et guides d'habitudes alimentaires dans un protocole guidé de 30 jours. Contenu informatif — ce n'est pas un conseil médical.">
-<meta name="robots" content="index, follow">
-<link rel="icon" type="image/webp" href="img/logo-icon.webp">
+<meta name="robots" content="noindex, nofollow">
+<title>SMAP DW01 DG</title>
+<link rel="icon" type="image/webp" href="/assets/logo-icon.webp">
 
-<!-- ╔════════════════════════════════════════════════════════════════════╗
-     ║  SALES/COMPLIANCE — Accélérateur Intestinal 7X (ES) · trilho DIGISTORE24 · marche FR            ║
-     ║  Estrutura modelada na sales page do LoveApp (hero→dor→solución→    ║
-     ║  cómo→incluido→para quién→comparación→oferta→garantía→FAQ→CTA).      ║
-     ║  Compliance: 60d incondicional · sem selo/countdown/depoimentos ·   ║
-     ║  sem claim de peso · disclaimer médico · unsubscribe no footer.     ║
-     ╚════════════════════════════════════════════════════════════════════╝ -->
+<!-- ╔══════════════════════════════════════════════════════════════════════╗
+     ║  DOWNSELL 01 — Accélérateur Intestinal 7X · paiement unique 37 €     ║
+     ║  Route publique : sante24h.site/dw1  (dossier /v/dw1-black/)         ║
+     ║                                                                       ║
+     ║  Servie par le Worker sur la MÊME URL (aucune redirection) : les      ║
+     ║  paramètres Digistore (digistore_upsell_session_id) restent dans      ║
+     ║  l'URL et l'achat en 1 clic fonctionne.                               ║
+     ║  NE JAMAIS ajouter de redirection ni de back-redirect ici : la        ║
+     ║  session resterait bloquée à l'étape précédente et le answer/yes      ║
+     ║  suivant serait résolu sur le mauvais produit.                        ║
+     ║                                                                       ║
+     ║  NE JAMAIS ajouter de payplan dans les liens : la chaîne de requête   ║
+     ║  survit à la réécriture du digistore.js et définit le plan facturé.   ║
+     ║  Cette page promet un paiement unique — un payplan ici deviendrait    ║
+     ║  un prélèvement non promis, donc un litige bancaire.                  ║
+     ║                                                                       ║
+     ║  Les DEUX boutons doivent exister et pointer vers des URL             ║
+     ║  DIFFÉRENTES (answer/yes et answer/no). Le bouton de refus ne doit    ║
+     ║  jamais déclencher un paiement.                                       ║
+     ║                                                                       ║
+     ║  Comptes de cette page : 57 € − 20 € = 37 €. Les trois chiffres       ║
+     ║  doivent rester cohérents partout si le prix change.                  ║
+     ╚══════════════════════════════════════════════════════════════════════╝ -->
 
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800;900&display=swap" rel="stylesheet">
-<style>
-  :root{
-    --rose:#A8823F; --coral:#C9A15C; --amber:#D4AF6A; --green:#6E8B5B;
-    --cream:#F7F3EA; --card:#FFFFFF; --text:#332E26; --muted:#6A6153; --border:#E7DFCE;
-    --grad-cta:linear-gradient(135deg,#8A6C33 0%,#6E5527 100%);
-    --grad-hero:linear-gradient(150deg,#4A3A2C 0%,#2E241D 58%,#241B1B 100%);
-    --grad-soft:linear-gradient(160deg,#FBF7EE 0%,#F3EDE0 100%);
-    --sh-sm:0 2px 8px rgba(51,46,38,.08); --sh-md:0 8px 24px rgba(51,46,38,.12);
-    --sh-btn:0 8px 22px rgba(138,108,51,.34);
-    --ease:cubic-bezier(.22,1,.36,1);
-  }
-  *{margin:0;padding:0;box-sizing:border-box}
-  html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
-  body{font-family:'Nunito',ui-rounded,system-ui,sans-serif;background:var(--cream);color:var(--text);line-height:1.55;-webkit-font-smoothing:antialiased;overflow-x:hidden}
-  img{max-width:100%;height:auto;display:block}
-  .wrap{max-width:480px;margin:0 auto;padding:0 20px 56px;position:relative}
-  .reveal{opacity:0;transform:translateY(22px);transition:opacity .7s var(--ease),transform .7s var(--ease)}
-  .reveal.in{opacity:1;transform:none}
-  @media(prefers-reduced-motion:reduce){.reveal{opacity:1;transform:none;transition:none}.device-img{animation:none!important}}
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-TNLBBT5G');</script>
+<!-- End Google Tag Manager -->
 
-  .brand{text-align:center;padding:20px 0 4px}
-  .brand img{width:92px;margin:0 auto}
-
-  /* HERO */
-  .hero{position:relative;background:var(--grad-hero);border-radius:28px;padding:30px 24px 30px;text-align:center;color:#fff;overflow:hidden;box-shadow:0 20px 50px -16px rgba(36,27,27,.42)}
-  .hero::before{content:'';position:absolute;top:-60px;right:-50px;width:170px;height:170px;background:rgba(255,255,255,.13);border-radius:50%}
-  .hero::after{content:'';position:absolute;bottom:-50px;left:-40px;width:130px;height:130px;background:rgba(255,255,255,.10);border-radius:50%}
-  .hero>*{position:relative;z-index:1}
-  .eyebrow{display:inline-flex;align-items:center;gap:7px;font-size:11px;font-weight:800;text-transform:uppercase;letter-spacing:1.3px;background:rgba(255,255,255,.18);border:1px solid rgba(255,255,255,.32);padding:7px 15px;border-radius:999px;margin-bottom:15px}
-  .eyebrow .dot{width:7px;height:7px;border-radius:50%;background:#fff;animation:pulse 2.2s infinite}
-  @keyframes pulse{0%{box-shadow:0 0 0 0 rgba(255,255,255,.6)}70%{box-shadow:0 0 0 8px rgba(255,255,255,0)}100%{box-shadow:0 0 0 0 rgba(255,255,255,0)}}
-  .hero h1{font-size:33px;font-weight:900;line-height:1.1;letter-spacing:-.5px;margin-bottom:11px}
-  .hero .deck{font-size:15.5px;font-weight:600;color:rgba(255,255,255,.95);line-height:1.5;max-width:36ch;margin:0 auto}
-  .device-stage{display:flex;justify-content:center;margin:26px 0 6px}@media(max-width:480px){.device-img{width:auto;max-height:40vh;max-width:78%}.device-stage{margin:18px 0 4px}}
-  .device-img{width:312px;max-width:82%;height:auto;display:block;filter:drop-shadow(0 26px 42px rgba(45,27,27,.34));animation:floatY 6.5s ease-in-out infinite}
-  @keyframes floatY{0%,100%{transform:translateY(0)}50%{transform:translateY(-10px)}}
-  .trust{display:flex;justify-content:center;gap:8px;flex-wrap:wrap;margin-top:14px}
-  .trust .t{display:inline-flex;align-items:center;gap:5px;font-size:11px;font-weight:700;color:#fff;background:rgba(255,255,255,.15);border:1px solid rgba(255,255,255,.25);padding:6px 11px;border-radius:999px}
-  .trust .t svg{width:13px;height:13px}
-
-  /* TRUST BAR */
-  .trustbar{display:grid;grid-template-columns:1fr 1fr;gap:1px;background:var(--border);border-radius:18px;overflow:hidden;margin-top:16px;box-shadow:var(--sh-sm)}
-  .trustbar .tb{background:#fff;padding:16px 12px;text-align:center}
-  .trustbar .tb svg{width:22px;height:22px;color:var(--rose);margin:0 auto 6px}
-  .trustbar .tb b{display:block;font-size:13px;font-weight:800;color:var(--text)}
-  .trustbar .tb span{font-size:11px;color:var(--muted)}
-
-  /* SECTION TITLE */
-  .sec-h{text-align:center;margin:40px 0 4px}
-  .sec-h .k{font-size:11.5px;font-weight:800;text-transform:uppercase;letter-spacing:1.3px;color:var(--rose)}
-  .sec-h h2{font-size:25px;font-weight:900;color:var(--text);line-height:1.18;letter-spacing:-.3px;margin-top:7px}
-  .sec-h p{font-size:14.5px;color:#7A7062;line-height:1.6;margin-top:9px}
-
-  .card{background:#fff;border-radius:20px;padding:22px;box-shadow:var(--sh-sm);margin-top:16px}
-  .card p{font-size:14.5px;color:#7A7062;line-height:1.6}
-  .card p+p{margin-top:12px}
-
-  /* PAIN LIST */
-  .pains{margin-top:18px;display:grid;gap:11px}
-  .pain{display:flex;gap:13px;align-items:flex-start;background:#fff;border:1px solid var(--border);border-radius:14px;padding:14px 16px;box-shadow:var(--sh-sm)}
-  .pain .pic{flex-shrink:0;width:34px;height:34px;border-radius:10px;background:var(--grad-soft);display:flex;align-items:center;justify-content:center;font-size:18px}
-  .pain p{font-size:14px;color:var(--text);font-weight:600;line-height:1.45;margin:0}
-
-  /* FEATURES */
-  .feats{display:grid;gap:12px;margin-top:18px}
-  .feat{display:flex;gap:13px;align-items:flex-start;background:#fff;border:1px solid var(--border);border-radius:16px;padding:15px 16px;box-shadow:var(--sh-sm);transition:transform .2s var(--ease),box-shadow .2s var(--ease)}
-  .feat:hover{transform:translateY(-2px);box-shadow:var(--sh-md)}
-  .feat .f-ic{flex-shrink:0;width:44px;height:44px;border-radius:13px;background:var(--grad-soft);display:flex;align-items:center;justify-content:center;font-size:22px}
-  .feat h4{font-size:15px;font-weight:800;color:var(--text);margin-bottom:3px;line-height:1.25}
-  .feat p{font-size:13px;color:var(--muted);line-height:1.5;margin:0}
-
-  /* STEPS */
-  .steps{margin-top:18px}
-  .step{display:flex;gap:15px;align-items:flex-start;background:#fff;border-radius:16px;padding:16px;box-shadow:var(--sh-sm)}
-  .step+.step{margin-top:11px}
-  .step-n{width:38px;height:38px;background:var(--grad-cta);color:#fff;border-radius:12px;display:flex;align-items:center;justify-content:center;font-size:17px;font-weight:900;flex-shrink:0;box-shadow:0 4px 10px rgba(232,64,112,.3)}
-  .step-c h4{font-size:15px;font-weight:800;color:var(--text);margin-bottom:3px}
-  .step-c p{font-size:13.5px;color:var(--muted);line-height:1.5}
-
-  /* WHO (sí/no) */
-  .who{margin-top:18px;display:grid;gap:14px}
-  @media(min-width:560px){.who{grid-template-columns:1fr 1fr}}
-  .who-col{background:#fff;border:1px solid var(--border);border-radius:18px;padding:18px;box-shadow:var(--sh-sm)}
-  .who-col h4{font-size:14px;font-weight:800;margin-bottom:12px;display:flex;align-items:center;gap:8px}
-  .who-col.yes h4{color:#4E6B3E}.who-col.no h4{color:var(--muted)}
-  .who-col ul{list-style:none;display:grid;gap:9px}
-  .who-col li{display:flex;gap:9px;align-items:flex-start;font-size:13.5px;color:#6A6153;line-height:1.45}
-  .who-col svg{flex-shrink:0;width:17px;height:17px}.who-col li svg{margin-top:1px}
-  .who-col.yes li svg{color:var(--green)}.who-col.no li svg{color:var(--muted)}
-
-  /* COMPARE */
-  .compare{margin-top:18px;border:1px solid var(--border);border-radius:18px;overflow:hidden;background:#fff;box-shadow:var(--sh-sm)}
-  .crow{display:grid;grid-template-columns:1.5fr 1fr 1fr 1fr;align-items:stretch}
-  .crow+.crow{border-top:1px solid var(--border)}
-  .crow.head{background:var(--card)}
-  .cell{padding:12px 8px;font-size:12px;color:var(--text);text-align:center;display:flex;align-items:center;justify-content:center}
-  .cell.feat{justify-content:flex-start;text-align:left;font-weight:700;font-size:12.5px}
-  .crow.head .cell{font-weight:800;font-size:11px;color:var(--muted);text-transform:uppercase;letter-spacing:.3px}
-  .crow.head .cell.us{color:var(--rose)}
-  .cell.us{background:var(--grad-soft);font-weight:800}
-  .cell .y{color:var(--green);font-weight:900}.cell .n{color:var(--muted);opacity:.6}
-
-  /* PRICE */
-  .price{position:relative;background:#fff;border:2px solid var(--rose);border-radius:24px;padding:28px 22px 24px;text-align:center;box-shadow:var(--sh-md);margin-top:20px;overflow:hidden}
-  .price::before{content:'';position:absolute;top:-40px;right:-40px;width:120px;height:120px;background:var(--grad-soft);border-radius:50%;opacity:.7}
-  .price>*{position:relative;z-index:1}
-  .price .p-name{font-size:12px;font-weight:800;text-transform:uppercase;letter-spacing:1.2px;color:var(--rose);margin-bottom:10px}
-  .price .p-val{font-size:46px;font-weight:900;color:var(--text);line-height:1;letter-spacing:-1px}
-  .price .p-model{font-size:13.5px;color:var(--muted);margin-top:9px}
-  .price .p-feat{list-style:none;text-align:left;display:grid;gap:9px;margin:20px 0;padding:18px 0;border-top:1px solid var(--border);border-bottom:1px solid var(--border)}
-  .price .p-feat li{display:flex;gap:10px;align-items:flex-start;font-size:14px;color:#6A6153}
-  .price .p-feat li svg{flex-shrink:0;width:18px;height:18px;color:var(--green);margin-top:1px}
-
-  /* CTA */
-  .cta{display:flex;align-items:center;justify-content:center;gap:9px;width:100%;min-height:56px;padding:15px 20px;background:var(--grad-cta);color:#fff;font-size:17px;font-weight:900;text-align:center;border-radius:999px;text-decoration:none;box-shadow:var(--sh-btn);transition:transform .15s var(--ease),box-shadow .15s var(--ease)}
-  .cta:hover{transform:translateY(-2px)}
-  .cta-note{font-size:12.5px;color:var(--muted);margin-top:13px;line-height:1.5}
-  .hero .cta{margin-top:22px}
-
-  /* GUARANTEE */
-  .guarantee{display:flex;align-items:center;gap:14px;background:rgba(82,201,127,.10);border:1.5px solid rgba(82,201,127,.35);border-radius:18px;padding:18px;margin-top:16px}
-  .guarantee .g-ic{width:50px;height:50px;flex-shrink:0}
-  .guarantee h4{font-size:15px;font-weight:800;color:#4E6B3E;margin-bottom:3px}
-  .guarantee p{font-size:13px;color:#3d7a57;line-height:1.5}
-
-  /* DISCLAIMER */
-  .disclaimer{background:#FBF4EF;border:1px solid var(--border);border-radius:16px;padding:17px 18px;margin-top:16px}
-  .disclaimer h4{font-size:11.5px;font-weight:800;text-transform:uppercase;letter-spacing:.8px;color:var(--muted);margin-bottom:7px}
-  .disclaimer p{font-size:12.5px;color:#6A6153;line-height:1.55}
-
-  /* FAQ */
-  .faqs{margin-top:16px;background:#fff;border-radius:20px;padding:6px 20px;box-shadow:var(--sh-sm)}
-  .faq{border-bottom:1px solid var(--border);padding:16px 0}
-  .faq:last-child{border-bottom:none}
-  .faq-q{font-size:14.5px;font-weight:800;color:var(--text);cursor:pointer;display:flex;justify-content:space-between;align-items:center;gap:12px;list-style:none}
-  .faq-q::-webkit-details-marker{display:none}
-  .faq-q .tg{width:25px;height:25px;background:var(--card);border-radius:50%;display:flex;align-items:center;justify-content:center;flex-shrink:0;transition:transform .25s var(--ease);font-size:16px;color:var(--rose);font-weight:800}
-  .faq[open] .faq-q .tg{transform:rotate(45deg)}
-  .faq-a{font-size:13.5px;color:var(--muted);line-height:1.6;padding-top:11px}
-  .faq-a strong{color:#7A7062}.faq-a a{color:var(--rose);font-weight:700;text-decoration:none}
-
-  /* CTA BAND */
-  .band{margin-top:40px;background:var(--grad-hero);border-radius:24px;padding:34px 24px;text-align:center;color:#fff;box-shadow:0 18px 44px -16px rgba(36,27,27,.42)}
-  .band h2{font-size:24px;font-weight:900;line-height:1.18;margin-bottom:10px}
-  .band p{font-size:14.5px;color:rgba(255,255,255,.92);margin-bottom:20px;line-height:1.5}
-  .band .cta{background:#fff;color:var(--rose)}
-
-  /* SUPPORT + FOOTER */
-  .support{background:var(--card);border-radius:20px;padding:24px 20px;text-align:center;margin-top:16px}
-  .support .s-emoji{font-size:32px;margin-bottom:8px}
-  .support h4{font-size:16px;font-weight:800;color:var(--text);margin-bottom:5px}
-  .support p{font-size:13.5px;color:var(--muted);margin-bottom:15px;line-height:1.5}
-  .support a{display:inline-flex;align-items:center;gap:8px;background:#fff;border:1.5px solid var(--border);border-radius:999px;padding:12px 20px;font-size:14px;font-weight:800;color:var(--rose);text-decoration:none}
-  .support a svg{width:16px;height:16px}
-  .foot{text-align:center;padding:26px 8px 0}
-  .foot p{font-size:12px;color:var(--muted);line-height:1.6;margin-top:10px}
-  .foot a{color:var(--rose);font-weight:800;text-decoration:none}.foot-links a{display:inline-block;padding:11px 7px}
-.cta-decline{display:inline-block;margin-top:13px;font-size:13.5px;font-weight:700;color:inherit;opacity:.72;text-decoration:underline;text-underline-offset:2px}</style>
-<!-- Digistore24 promocode -->
+<!-- Digistore24 — achat en 1 clic : réécrit les liens answer/yes et answer/no
+     en y insérant l'identifiant de session. Il balaie tous les <a> du document
+     au DOM ready et réinstalle la réécriture sur mousedown (capture), donc les
+     boutons de la barre fixe sont pris eux aussi. -->
 <script src="https://www.digistore24-scripts.com/service/digistore.js"></script>
 <script>digistoreUpsell()</script>
+
+<style>
+  :root{
+    --gold:#8A6C33;
+    --gold-dark:#6E5527;
+    --cream:#F7F3EA;
+    --card:#FFFFFF;
+    --soft:#FBF7EE;
+    --text:#332E26;
+    --text-soft:#5A5246;
+    --muted:#8A8274;
+    --line:#E7DFCE;
+    --green:#2E9E58;
+    --green-dark:#25804A;
+    --red:#B03A2E;
+  }
+  *{margin:0;padding:0;box-sizing:border-box}
+  html{-webkit-text-size-adjust:100%}
+  body{
+    font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;
+    background:var(--cream);color:var(--text);
+    line-height:1.55;-webkit-font-smoothing:antialiased;
+    padding-bottom:96px; /* place pour la barre fixe */
+  }
+  a{color:inherit}
+  :focus-visible{outline:3px solid var(--gold);outline-offset:3px;border-radius:4px}
+
+  /* ══ ÉCRAN 1 · RÉVÉLATION DE LA REMISE ══
+     Masqué par défaut : sans JavaScript, l'offre s'affiche directement. */
+  #screenSlot{
+    position:fixed;inset:0;z-index:200;
+    display:flex;flex-direction:column;align-items:center;justify-content:center;
+    gap:26px;padding:38px 20px;text-align:center;
+    background:radial-gradient(ellipse at center,#3E3124 0%,#241B1B 100%);
+    color:#fff;
+  }
+  #screenSlot[hidden]{display:none}
+  body.slot-on{overflow:hidden}
+  body.slot-on #screenOffer{display:none}
+
+  .slot-head h1{
+    font-size:clamp(21px,5.6vw,29px);font-weight:900;line-height:1.2;
+    color:#F0D9A4;margin-bottom:8px;
+  }
+  .slot-head p{font-size:clamp(14px,3.6vw,16px);color:rgba(255,255,255,.78);line-height:1.5}
+  .slot-head .win{font-size:clamp(26px,8vw,40px);color:#F5C64F;text-transform:uppercase;letter-spacing:-.5px}
+
+  .machine{
+    background:#171310;border:4px solid var(--gold);border-radius:20px;
+    padding:18px 20px;display:flex;gap:12px;align-items:center;
+    box-shadow:0 0 44px rgba(138,108,51,.5);position:relative;
+  }
+  .machine::before{
+    content:'';position:absolute;top:-14px;left:50%;transform:translateX(-50%);
+    width:44px;height:16px;background:var(--gold);border-radius:5px 5px 0 0;
+  }
+  .reel{
+    width:86px;height:86px;background:#fff;border-radius:12px;
+    display:flex;align-items:center;justify-content:center;overflow:hidden;
+  }
+  .reel-item{
+    width:86px;height:86px;display:flex;align-items:center;justify-content:center;
+    font-size:34px;line-height:1;color:#171310;font-weight:900;
+  }
+  .reel-item.amount{font-size:19px;color:#1F7A46;letter-spacing:-.3px}
+  @keyframes winflash{0%,100%{background:#fff}50%{background:#FBF0D2}}
+  .reel.win{animation:winflash .42s ease-in-out 3}
+  @media(max-width:420px){
+    .reel,.reel-item{width:72px;height:72px}
+    .reel-item{font-size:29px}
+    .reel-item.amount{font-size:16px}
+  }
+
+  .slot-truth{
+    font-size:13.5px;color:rgba(255,255,255,.62);line-height:1.55;max-width:330px;
+  }
+  .slot-skip{
+    background:none;border:0;font:inherit;font-size:14px;font-weight:700;
+    color:rgba(255,255,255,.72);text-decoration:underline;cursor:pointer;padding:8px 12px;
+  }
+
+  /* ══ BANDEAU HAUT ══ */
+  .topbar{
+    background:var(--gold-dark);color:#fff;text-align:center;
+    padding:11px 18px;font-size:14.5px;font-weight:800;line-height:1.4;
+  }
+  .topbar b{color:#F0D9A4}
+  @media(max-width:480px){ .topbar{font-size:13px;padding:10px 14px} }
+
+  /* ══ COLONNE ══ */
+  .wrap{max-width:580px;margin:0 auto;padding:34px 22px 40px}
+
+  /* ══ TYPOGRAPHIE ══ */
+  .kicker{
+    text-align:center;font-size:12.5px;font-weight:800;letter-spacing:1.5px;
+    text-transform:uppercase;color:var(--muted);margin-bottom:14px;
+  }
+  h1{
+    text-align:center;font-size:38px;font-weight:900;line-height:1.1;
+    letter-spacing:-.6px;margin-bottom:22px;
+  }
+  @media(max-width:480px){ h1{font-size:30px} }
+
+  p.copy{font-size:18.5px;color:var(--text-soft);margin-bottom:16px;text-align:left}
+  p.copy strong{color:var(--text);font-weight:800}
+  @media(max-width:480px){ p.copy{font-size:17.5px} }
+
+  .punch{
+    text-align:center;font-size:23px;font-weight:900;line-height:1.25;
+    margin:26px 0;color:var(--text);
+  }
+  @media(max-width:480px){ .punch{font-size:20px} }
+
+  .rule{height:1px;background:var(--line);border:0;margin:30px 0}
+
+  /* ══ BLOC PRIX ══ */
+  .price-box{
+    background:var(--card);border:2px solid var(--line);border-radius:20px;
+    padding:26px 20px;text-align:center;margin:26px 0;
+    box-shadow:0 6px 20px rgba(51,46,38,.08);
+  }
+  .price-box .label{
+    display:inline-block;background:var(--gold);color:#fff;
+    font-size:12px;font-weight:900;letter-spacing:1.2px;text-transform:uppercase;
+    padding:5px 14px;border-radius:999px;margin-bottom:12px;
+  }
+  .price-box .was{font-size:17px;color:var(--muted);text-decoration:line-through;font-weight:700}
+  .price-box .amount{font-size:62px;font-weight:900;line-height:1;color:var(--gold-dark);letter-spacing:-2.5px}
+  @media(max-width:480px){ .price-box .amount{font-size:54px} }
+  .price-box .save{
+    display:inline-block;margin-top:10px;background:#E8F5EC;color:#1F7A46;
+    font-size:15px;font-weight:900;padding:6px 14px;border-radius:999px;
+  }
+  .price-box .never{font-size:15.5px;color:var(--text-soft);margin-top:12px;line-height:1.55}
+
+  /* ══ CE QUE TU GARDES ══ */
+  .keep-head{text-align:center;font-size:21px;font-weight:900;margin:6px 0 4px}
+  .keep-sub{text-align:center;font-size:15.5px;color:var(--muted);margin-bottom:18px}
+
+  .keep{
+    background:var(--soft);border:1px solid var(--line);border-radius:16px;padding:16px 18px;
+    margin-bottom:12px;display:flex;gap:14px;align-items:flex-start;text-align:left;
+  }
+  .keep .tick{
+    flex:0 0 26px;width:26px;height:26px;border-radius:50%;background:var(--green);
+    display:flex;align-items:center;justify-content:center;margin-top:2px;
+  }
+  .keep .tick svg{width:15px;height:15px;stroke:#fff;fill:none;stroke-width:3.2;stroke-linecap:round;stroke-linejoin:round}
+  .keep h3{font-size:17px;font-weight:900;line-height:1.25;margin-bottom:4px}
+  .keep p{font-size:15.5px;color:var(--text-soft);line-height:1.5}
+
+  .total{
+    text-align:center;font-size:17px;font-weight:800;
+    padding:14px;background:var(--card);border:2px dashed var(--line);border-radius:14px;
+  }
+  .total s{color:var(--muted);font-weight:700}
+  .total strong{color:var(--gold-dark)}
+
+  /* ══ CE QUI N'ENTRE PAS ══ */
+  .excluded{
+    background:var(--card);border-left:4px solid var(--muted);border-radius:0 12px 12px 0;
+    padding:16px 18px;margin:26px 0;text-align:left;
+  }
+  .excluded h4{font-size:14px;font-weight:900;margin-bottom:6px;text-transform:uppercase;letter-spacing:.6px;color:var(--muted)}
+  .excluded p{font-size:16px;color:var(--text-soft);line-height:1.55}
+  .excluded strong{color:var(--text)}
+
+  /* ══ GARANTIE ══ */
+  .guarantee{
+    background:var(--soft);border:1px solid var(--line);border-radius:18px;
+    padding:22px 20px;text-align:center;margin:26px 0;
+  }
+  .guarantee .seal{width:40px;height:40px;margin:0 auto 8px;display:block;stroke:var(--gold);fill:none;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}
+  .guarantee h4{font-size:19px;font-weight:900;margin-bottom:8px}
+  .guarantee p{font-size:15.5px;color:var(--text-soft);line-height:1.55}
+  .guarantee p + p{margin-top:9px}
+  .guarantee a{color:var(--gold-dark);font-weight:800}
+
+  /* ══ APPEL À L'ACTION ══ */
+  .cta-block{margin:28px 0 8px}
+  .btn{
+    display:block;width:100%;background:var(--green);
+    color:#fff;font-family:inherit;font-weight:900;font-size:19px;line-height:1.25;
+    padding:19px 16px;border-radius:12px;border:0;
+    text-align:center;text-decoration:none;cursor:pointer;
+    box-shadow:0 5px 0 var(--green-dark);
+    transition:transform .12s ease, box-shadow .12s ease;
+  }
+  .btn:active{transform:translateY(3px);box-shadow:0 2px 0 var(--green-dark)}
+  @media(max-width:480px){ .btn{font-size:17px;padding:18px 12px} }
+
+  .btn-note{text-align:center;font-size:14px;color:var(--muted);margin-top:11px}
+
+  .decline{
+    display:block;text-align:center;margin-top:20px;
+    font-size:15px;color:var(--muted);text-decoration:underline;
+  }
+
+  /* ══ BARRE FIXE ══ */
+  .sticky{
+    position:fixed;left:0;right:0;bottom:0;z-index:50;
+    background:rgba(247,243,234,.97);backdrop-filter:blur(8px);
+    border-top:1px solid var(--line);padding:12px 16px calc(12px + env(safe-area-inset-bottom));
+  }
+  .sticky .inner{max-width:580px;margin:0 auto}
+  .sticky .btn{font-size:17px;padding:15px 12px;box-shadow:0 4px 0 var(--green-dark)}
+
+  /* ══ PIED DE PAGE ══ */
+  .foot{text-align:center;padding:26px 22px 10px;color:var(--muted)}
+  .foot .disclaimer{font-size:12.5px;line-height:1.6;max-width:520px;margin:0 auto 10px}
+  .foot .links{font-size:13px;line-height:1.7;margin-bottom:10px}
+  .foot .links a{color:var(--gold-dark);font-weight:800;text-decoration:none;display:inline-block;padding:6px 5px}
+  .foot .legal{font-size:12.5px;line-height:1.7;max-width:520px;margin:0 auto}
+  .foot .legal a{color:var(--gold-dark);font-weight:700}
+
+  /* ══ BARRE DE PROGRESSION ══ */
+  .progress{position:fixed;top:0;left:0;right:0;z-index:60;height:4px;background:rgba(110,85,39,.14)}
+  .progress span{display:block;height:100%;width:0%;background:linear-gradient(90deg,var(--gold),var(--gold-dark));transition:width .1s linear}
+
+  /* ══ RÉVÉLATION AU DÉFILEMENT ══
+     N'est masqué que si le JavaScript tourne (body.js-reveal). */
+  body.js-reveal .rv{
+    opacity:0;transform:translateY(22px);
+    transition:opacity .55s ease, transform .55s cubic-bezier(.16,1,.3,1);
+  }
+  body.js-reveal .rv.on{opacity:1;transform:none}
+
+  /* ══ FLÈCHE « CONTINUE » ══ */
+  .cue{position:fixed;left:0;right:0;bottom:18px;z-index:45;text-align:center;pointer-events:none;transition:opacity .4s ease}
+  .cue.gone{opacity:0}
+  .cue .pill{
+    display:inline-block;background:var(--gold);color:#fff;
+    font-size:14px;font-weight:800;padding:9px 18px;border-radius:999px;
+    box-shadow:0 4px 14px rgba(138,108,51,.35);animation:bob 1.5s ease-in-out infinite;
+  }
+  @keyframes bob{0%,100%{transform:translateY(0)}50%{transform:translateY(6px)}}
+
+  @media(prefers-reduced-motion:reduce){
+    *{transition:none!important;animation:none!important}
+    body.js-reveal .rv{opacity:1!important;transform:none!important}
+  }
+</style>
 </head>
 <body>
 
-<div class="wrap">
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TNLBBT5G"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
 
-  <!-- BRAND -->
-  <div class="brand"><img src="img/logo.webp" alt="Accélérateur Intestinal 7X" width="109" height="150"></div>
+<!-- ═══ ÉCRAN 1 · LA REMISE DE 20 € S'AFFICHE ═══
+     La remise est décidée d'avance (57 € → 37 €) : l'animation ne fait que la
+     montrer. Aucun texte ne doit laisser croire à un tirage au sort ni à une
+     recherche en cours. L'écran est ignoré si le JavaScript est absent ou si
+     la personne a demandé de réduire les animations. -->
+<div id="screenSlot" hidden>
 
-  <!-- ═══ HERO ═══ -->
-  <div class="hero reveal in">
-    <span class="eyebrow"><span class="dot"></span>Application web · Accès numérique</span>
-    <h1>Ton protocole de 30 jours, dans une seule application.</h1>
-    <div class="deck">Accélérateur Intestinal 7X réunit les recettes, les habitudes et les guides dans un plan quotidien simple à suivre — pas à pas, sans complications.</div>
-    <div class="device-stage">
-      <img class="device-img" src="img/app-iphone-fr.webp" alt="L\'application sur un iPhone : ta mission du jour et ta recette" width="452" height="933">
+  <div class="slot-head">
+    <div id="slotPre">
+      <h1>Ta remise est déjà réservée.</h1>
+      <p>Elle s'applique à cette page, tout de suite.</p>
     </div>
-    <a href="https://www.checkout-ds24.com/answer/yes?template=light" class="cta">Ajouter à ma commande — 37 €</a>
-      <a href="https://www.digistore24.com/answer/no" class="cta-decline">Non merci — continuer sans cette offre</a>
-    <div class="trust">
-      <span class="t"><svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.4"><path stroke-linecap="round" stroke-linejoin="round" d="M13 10V3L4 14h7v7l9-11h-7z"/></svg>Accès immédiat</span>
-      <span class="t"><svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.4"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>60 jours de garantie</span>
-    </div>
-  </div>
-
-  <!-- ═══ TRUST BAR ═══ -->
-  <div class="trustbar reveal">
-    <div class="tb"><svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M13 10V3L4 14h7v7l9-11h-7z"/></svg><b>Accès immédiat</b><span>juste après ton achat</span></div>
-    <div class="tb"><svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M9 17v-2a4 4 0 014-4h.5M5 4h14a1 1 0 011 1v3a5 5 0 01-5 5H9a5 5 0 01-5-5V5a1 1 0 011-1z"/></svg><b>Dans le navigateur</b><span>n'importe quel appareil</span></div>
-    <div class="tb"><svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg><b>60 jours de garantie</b><span>sans justification</span></div>
-    <div class="tb"><svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M12 6.25v13M12 6.25C10.8 5.48 9.2 5 7.5 5S4.2 5.48 3 6.25v13C4.2 18.48 5.8 18 7.5 18s3.3.48 4.5 1.25m0-13C13.2 5.48 14.8 5 16.5 5c1.7 0 3.3.48 4.5 1.25v13C19.8 18.48 18.2 18 16.5 18c-1.7 0-3.3.48-4.5 1.25"/></svg><b>Contenu éducatif</b><span>recettes et guides</span></div>
-  </div>
-
-  <!-- ═══ DOR / PROBLEMA ═══ -->
-  <div class="sec-h reveal"><span class="k">Le problème</span><h2>Commencer, c'est facile. Tenir dans la durée, beaucoup moins.</h2><p>Ce qui manque, la plupart du temps, ce n'est pas l'information — c'est l'organisation et la constance. Ça te dit sûrement quelque chose :</p></div>
-  <div class="pains">
-    <div class="pain reveal"><div class="pic">🔍</div><p>Des recettes éparpillées un peu partout, sans savoir par où commencer.</p></div>
-    <div class="pain reveal"><div class="pic">🌀</div><p>Tu démarres à fond le lundi… et dès le jeudi, tu as déjà lâché.</p></div>
-    <div class="pain reveal"><div class="pic">🤷‍♀️</div><p>Ne pas savoir ce que tu dois faire <em>aujourd'hui</em>, concrètement.</p></div>
-    <div class="pain reveal"><div class="pic">📉</div><p>Perdre la motivation parce que tu ne vois ta progression nulle part.</p></div>
-  </div>
-
-  <!-- ═══ SOLUÇÃO / QUÉ ES ═══ -->
-  <div class="sec-h reveal"><span class="k">La solution</span><h2>Une application qui organise tout pour toi</h2></div>
-  <div class="card reveal">
-    <p>Accélérateur Intestinal 7X est une <strong>application web de contenu éducatif</strong> : recettes et guides d'habitudes alimentaires, organisés dans un <strong>protocole guidé de 30 jours</strong> facile à suivre. Au lieu de chercher et de décider chaque jour, tu ouvres l'application et tu sais exactement quoi faire.</p>
-    <p>Chaque jour, tu as une <strong>mission simple</strong>, accès à la <strong>bibliothèque de recettes</strong> (ta recette principale incluse) et des <strong>guides pas à pas</strong> qui expliquent chaque étape, à ton propre rythme. C'est un contenu <strong>informatif et éducatif</strong> pour accompagner ta routine — ce n'est pas un conseil médical ni nutritionnel, ni un traitement.</p>
-  </div>
-
-  <!-- ═══ CÓMO FUNCIONA ═══ -->
-  <div class="sec-h reveal"><span class="k">Comment ça marche</span><h2>En 3 étapes simples</h2></div>
-  <div class="steps">
-    <div class="step reveal"><div class="step-n">1</div><div class="step-c"><h4>Réponds à un court quiz</h4><p>Parle-nous de ta routine et de tes préférences pour personnaliser ton plan.</p></div></div>
-    <div class="step reveal"><div class="step-n">2</div><div class="step-c"><h4>Reçois ton plan de 30 jours</h4><p>L'application prépare ton calendrier quotidien et ta première recette.</p></div></div>
-    <div class="step reveal"><div class="step-n">3</div><div class="step-c"><h4>Suis ta routine jour après jour</h4><p>Ouvre ta mission du jour et consulte les recettes et les guides quand tu veux.</p></div></div>
-  </div>
-
-  <!-- ═══ QUÉ INCLUYE ═══ -->
-  <div class="sec-h reveal"><span class="k">Ton accès inclut</span><h2>Tout au même endroit</h2></div>
-  <div class="feats">
-    <div class="feat reveal"><div class="f-ic">📅</div><div><h4>Protocole guidé de 30 jours</h4><p>Une mission simple chaque jour, facile à suivre et à cocher une fois faite.</p></div></div>
-    <div class="feat reveal"><div class="f-ic">🍮</div><div><h4>Bibliothèque de recettes pas à pas</h4><p>Ta recette principale et ses variantes y sont incluses, expliquées clairement.</p></div></div>
-    <div class="feat reveal"><div class="f-ic">📋</div><div><h4>Guides pas à pas</h4><p>Des guides courts pour accompagner chaque étape de ta routine.</p></div></div>
-    <div class="feat reveal"><div class="f-ic">📈</div><div><h4>Suivi de ta routine</h4><p>Note tes habitudes jour après jour et visualise ta progression dans le calendrier.</p></div></div>
-    <div class="feat reveal"><div class="f-ic">📱</div><div><h4>Accès dans le navigateur</h4><p>Sur ton téléphone, ta tablette ou ton ordinateur. Sans téléchargement ni installation.</p></div></div>
-  </div>
-
-  <!-- ═══ PARA QUIÉN ═══ -->
-  <div class="sec-h reveal"><span class="k">Est-ce pour toi ?</span><h2>Pensée pour celles qui veulent de l'ordre</h2></div>
-  <div class="who">
-    <div class="who-col yes reveal">
-      <h4><svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.4"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>Oui, si…</h4>
-      <ul>
-        <li><svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.4"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>Tu veux des recettes et une routine bien organisée au même endroit.</li>
-        <li><svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.4"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>Tu préfères être guidée pas à pas, sans avoir à trop réfléchir.</li>
-        <li><svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.4"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>Tu aimes suivre ta progression jour après jour.</li>
-      </ul>
-    </div>
-    <div class="who-col no reveal s2">
-      <h4><svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.4"><path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12"/></svg>Non, si…</h4>
-      <ul>
-        <li><svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.4"><path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12"/></svg>Tu cherches un traitement médical ou des résultats garantis.</li>
-        <li><svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.4"><path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12"/></svg>Tu n'as pas l'intention de suivre le plan ni d'y consacrer quelques minutes par jour.</li>
-      </ul>
+    <div id="slotPost" hidden>
+      <h1 class="win">Remise débloquée</h1>
+      <p><strong>20 €</strong> retirés du prix de l'offre précédente.</p>
     </div>
   </div>
 
-  <!-- ═══ COMPARACIÓN ═══ -->
-  <div class="sec-h reveal"><span class="k">Tes options</span><h2>Pourquoi une application plutôt que des recettes en vrac</h2></div>
-  <div class="compare reveal">
-    <div class="crow head"><div class="cell feat">&nbsp;</div><div class="cell us">Accélérateur Intestinal 7X</div><div class="cell">Recettes en vrac</div><div class="cell">Sans guide</div></div>
-    <div class="crow"><div class="cell feat">Plan jour après jour</div><div class="cell us"><span class="y">✓</span></div><div class="cell"><span class="n">—</span></div><div class="cell"><span class="n">—</span></div></div>
-    <div class="crow"><div class="cell feat">Recettes pas à pas</div><div class="cell us"><span class="y">✓</span></div><div class="cell"><span class="y">✓</span></div><div class="cell"><span class="n">—</span></div></div>
-    <div class="crow"><div class="cell feat">Guides pas à pas</div><div class="cell us"><span class="y">✓</span></div><div class="cell"><span class="n">—</span></div><div class="cell"><span class="n">—</span></div></div>
-    <div class="crow"><div class="cell feat">Suivi de ta progression</div><div class="cell us"><span class="y">✓</span></div><div class="cell"><span class="n">—</span></div><div class="cell"><span class="n">—</span></div></div>
-    <div class="crow"><div class="cell feat">Prix TTC</div><div class="cell us">37 €</div><div class="cell">—</div><div class="cell">—</div></div>
+  <div class="machine" id="machine" aria-hidden="true">
+    <div class="reel" id="reel1"><div class="reel-item">&#128273;</div></div>
+    <div class="reel" id="reel2"><div class="reel-item">&#128176;</div></div>
+    <div class="reel" id="reel3"><div class="reel-item">&#10071;</div></div>
   </div>
 
-  <!-- ═══ OFERTA / PRECIO ═══ -->
-  <div class="sec-h reveal"><span class="k">L'offre</span><h2>Accès complet à Accélérateur Intestinal 7X</h2></div>
-  <div class="price reveal">
-    <div class="p-name">Accès complet</div>
-    <div class="p-val">37 €</div>
-    <div class="p-model">Paiement unique · sans frais récurrents · TVA incluse</div>
-    <ul class="p-feat">
-      <li><svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.4"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>Protocole guidé de 30 jours</li>
-      <li><svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.4"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>Bibliothèque de recettes + guides pas à pas</li>
-      <li><svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.4"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>Suivi de ta routine</li>
-      <li><svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.4"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>Garantie de 60 jours, sans justification</li>
-    </ul>
-    <a href="https://www.checkout-ds24.com/answer/yes?template=light" class="cta">Ajouter à ma commande — 37 €</a>
-      <a href="https://www.digistore24.com/answer/no" class="cta-decline">Non merci — continuer sans cette offre</a>
-    <div class="cta-note">Paiement sécurisé via Digistore24 · accès immédiat dans le navigateur.</div>
+  <p class="slot-truth">Ce n'est pas un tirage au sort&nbsp;: 20&nbsp;€ de moins, c'est le prix de cette page. 57&nbsp;€ hier, 37&nbsp;€ ici.</p>
+
+  <button type="button" class="slot-skip" id="slotSkip">Voir l'offre tout de suite &rarr;</button>
+</div>
+
+<!-- ═══ ÉCRAN 2 · L'OFFRE ═══ -->
+<div id="screenOffer">
+
+  <!-- ═══ 0 · BARRE DE PROGRESSION ═══ -->
+  <div class="progress"><span id="progressFill"></span></div>
+
+  <!-- ═══ FLÈCHE « CONTINUE » (disparaît au premier défilement) ═══ -->
+  <div class="cue" id="scrollCue"><span class="pill">&darr; Continue</span></div>
+
+  <!-- ═══ 1 · BANDEAU HAUT ═══ -->
+  <div class="topbar">
+    ÉTAPE 1 SUR 2 &middot; <b>Ta commande Stylo Maison est déjà payée et confirmée.</b>
   </div>
 
-  <!-- ═══ GARANTÍA ═══ -->
-  <div class="guarantee reveal">
-    <svg class="g-ic" viewBox="0 0 50 50" fill="none"><circle cx="25" cy="25" r="25" fill="#BBF0CF"/><circle cx="25" cy="25" r="18" fill="#52C97F"/><path d="M17 25l5 5 11-11" stroke="#fff" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></svg>
-    <div><h4>Garantie de 60 jours — sans justification</h4><p>Si tu n'es pas satisfaite, pour quelque raison que ce soit, dans les 60 premiers jours, écris-nous et nous te remboursons à 100 %, de façon inconditionnelle et sans justificatif à fournir. En plus de cette garantie commerciale, tu disposes du droit légal de rétractation de 14 jours prévu pour les achats en ligne dans l'Union européenne.</p></div>
+  <div class="wrap">
+
+    <!-- ═══ 2 · ON ACCUSE RÉCEPTION DU « NON » ═══ -->
+    <p class="kicker">Attends — 40 secondes</p>
+    <h1>D'accord.<br>Aucun souci.</h1>
+
+    <p class="copy">Tu viens de dire non à 57 €. Je comprends très bien pourquoi.</p>
+    <p class="copy"><strong>Et je ne crois pas que ce soit l'application qui ne t'intéresse pas.</strong> Tu viens de payer ta commande il y a une minute. Remettre 57 € dans la même minute, c'est beaucoup demander.</p>
+
+    <!-- ═══ 3 · ON NOMME LA VRAIE OBJECTION ═══ -->
+    <p class="copy">C'est une objection de <strong>montant</strong>, pas d'envie.</p>
+    <p class="copy">Et une objection de montant, ça, je peux faire quelque chose.</p>
+
+    <p class="punch rv">Alors j'enlève 20 €.<br>Et j'enlève ce qui les justifiait.</p>
+
+    <hr class="rule">
+
+    <!-- ═══ 4 · L'OFFRE + LA RAISON DU PRIX ═══ -->
+    <p class="copy">Voilà pourquoi la note descend&nbsp;— et pourquoi le prix d'avant n'était pas gonflé&nbsp;:</p>
+    <p class="copy">L'offre à 57 €, c'était l'application <strong>plus les modules bonus</strong> de l'accès complet. Ici, je retire les bonus. <strong>Tu gardes l'application entière</strong>, exactement telle qu'elle est. Rien n'est retiré du protocole.</p>
+
+    <div class="price-box rv">
+      <span class="label">Paiement unique</span>
+      <p class="was">57 €</p>
+      <p class="amount">37 €</p>
+      <p class="save">Tu économises 20 €</p>
+      <p class="never">Un seul paiement, aujourd'hui.<br>Aucun prélèvement plus tard. Aucun abonnement.<br>TVA incluse.</p>
+    </div>
+
+    <hr class="rule">
+
+    <!-- ═══ 5 · CE QUI RESTE INCLUS ═══ -->
+    <p class="keep-head rv">Ce que tu gardes à 37 €</p>
+    <p class="keep-sub rv">L'Accélérateur Intestinal 7X, en entier.</p>
+
+    <div class="keep rv">
+      <span class="tick"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 13l4 4L19 7"/></svg></span>
+      <div>
+        <h3>Le protocole guidé de 30 jours</h3>
+        <p>Une mission simple par jour, à cocher une fois faite. Tu ouvres l'application et tu sais quoi faire aujourd'hui&nbsp;— sans avoir à décider.</p>
+      </div>
+    </div>
+
+    <div class="keep rv">
+      <span class="tick"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 13l4 4L19 7"/></svg></span>
+      <div>
+        <h3>La bibliothèque de recettes pas à pas</h3>
+        <p>Ta recette principale et ses variantes, expliquées clairement, au même endroit. Plus de recettes éparpillées dans dix onglets.</p>
+      </div>
+    </div>
+
+    <div class="keep rv">
+      <span class="tick"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 13l4 4L19 7"/></svg></span>
+      <div>
+        <h3>Les guides pas à pas</h3>
+        <p>Des guides courts qui accompagnent chaque étape de ta routine, à ton rythme.</p>
+      </div>
+    </div>
+
+    <div class="keep rv">
+      <span class="tick"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 13l4 4L19 7"/></svg></span>
+      <div>
+        <h3>Le suivi de ta routine</h3>
+        <p>Tu notes tes habitudes jour après jour et tu vois ta progression dans le calendrier. C'est ce qui fait tenir la deuxième semaine.</p>
+      </div>
+    </div>
+
+    <div class="keep rv">
+      <span class="tick"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 13l4 4L19 7"/></svg></span>
+      <div>
+        <h3>L'accès dans le navigateur</h3>
+        <p>Téléphone, tablette ou ordinateur. Sans téléchargement, sans installation. Accès immédiat après ce clic.</p>
+      </div>
+    </div>
+
+    <p class="total rv">L'application complète&nbsp;: <s>57 €</s> &nbsp;&rarr;&nbsp; <strong>37 € aujourd'hui</strong></p>
+
+    <!-- ═══ 6 · CE QUI N'ENTRE PAS (l'offre complète garde sa valeur) ═══
+         COLE_AQUI_LES_NOMS_DES_BONUS_UP1 — si la page UP1 nomme les modules
+         bonus, reprendre ici les noms exacts, un par un. Tant qu'ils ne sont
+         pas confirmés, on reste générique : jamais de bonus inventé. -->
+    <div class="excluded rv">
+      <h4>Pour être honnête avec toi</h4>
+      <p>Cette version <strong>ne comprend pas les modules bonus</strong> de l'accès complet à 57 €. Ils restent réservés à celles qui ont pris le pack entier. Ici, tu prends le cœur de l'application&nbsp;: le protocole, les recettes, les guides et le suivi. C'est exactement ce qu'il faut pour commencer demain matin.</p>
+    </div>
+
+    <!-- ═══ 7 · GARANTIE ═══ -->
+    <div class="guarantee rv">
+      <svg class="seal" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3l7 3v5.5c0 4.4-2.9 7.9-7 9.5-4.1-1.6-7-5.1-7-9.5V6l7-3z"/><path d="M9 12l2 2 4-4"/></svg>
+      <h4>60 jours pour changer d'avis</h4>
+      <p>Si, dans les 60 jours, tu estimes que ce n'était pas pour toi, tu écris une ligne à <a href="mailto:contact.stylomaisonapp@gmail.com">contact.stylomaisonapp@gmail.com</a> et on te rembourse les 37 €, à 100 %, sans justification à fournir.</p>
+      <p>En plus de cette garantie commerciale, tu disposes du <strong>droit légal de rétractation de 14 jours</strong> prévu pour les achats en ligne dans l'Union européenne. L'un s'ajoute à l'autre.</p>
+    </div>
+
+    <!-- ═══ 8 · APPEL À L'ACTION ═══ -->
+    <div class="cta-block rv">
+      <p class="punch" style="margin-top:0">Tu as déjà payé la partie la plus chère.<br>Là, c'est 37 € pour ne pas avoir à t'organiser toute seule.</p>
+
+      <!-- OUI — le digistore.js réécrit ce lien en /answer/&lt;session_id&gt;/yes.
+           Aucun payplan : la chaîne de requête survit à la réécriture. -->
+      <a class="btn" href="https://www.checkout-ds24.com/answer/yes?template=light">
+        OUI — JE LA PRENDS À 37 €
+      </a>
+      <p class="btn-note">Un seul clic. Tu n'as pas à ressaisir ta carte.</p>
+
+      <!-- NON — doit exister et pointer ailleurs que le lien d'acceptation.
+           Si la page n'a qu'un « yes », le digistore.js injecte lui-même un
+           cadre de refus par-dessus la page. -->
+      <a class="decline" href="https://www.digistore24.com/answer/no">Non merci, je continue sans l'application</a>
+    </div>
+
   </div>
 
-  <!-- ═══ FAQ ═══ -->
-  <div class="sec-h reveal"><span class="k">Avant de commencer</span><h2>Questions fréquentes</h2></div>
-  <div class="faqs reveal">
-    <details class="faq"><summary class="faq-q"><span>Comment j'accède à l'application après l'achat ?</span><span class="tg">+</span></summary><div class="faq-a">Juste après ton achat, tu recevras par e-mail tes identifiants d'accès à Accélérateur Intestinal 7X. L'application fonctionne dans le navigateur, sur n'importe quel appareil, sans téléchargement. Pense à vérifier ton dossier spam si tu ne vois pas l'e-mail tout de suite.</div></details>
-    <details class="faq"><summary class="faq-q"><span>Y a-t-il des frais récurrents ?</span><span class="tg">+</span></summary><div class="faq-a">Non. C'est un <strong>paiement unique de 37 €, TVA incluse</strong> — sans abonnement ni reconduction.</div></details>
-    <details class="faq"><summary class="faq-q"><span>Comment le prélèvement apparaît-il sur mon relevé ?</span><span class="tg">+</span></summary><div class="faq-a">Ton achat est traité de façon sécurisée par <strong>Digistore24</strong> et le paiement apparaîtra sur ton relevé bancaire comme <strong>D24 - Order ID</strong>. Si tu vois ce paiement, il correspond bien à ton achat — ce n'est pas une fraude.</div></details>
-    <details class="faq"><summary class="faq-q"><span>Puis-je demander un remboursement ?</span><span class="tg">+</span></summary><div class="faq-a">Oui. Tu bénéficies d'une <strong>garantie de 60 jours, inconditionnelle et sans justification</strong>. Écris-nous à <strong>contact.stylomaisonapp@gmail.com</strong> dans les 60 jours et nous te remboursons à 100 %. Tu disposes également, en tant que consommatrice dans l'Union européenne, d'un droit légal de rétractation de 14 jours qui s'ajoute à cette garantie commerciale. Voir la <a href="/app/remboursement/">politique de remboursement</a>.</div></details>
-    <details class="faq"><summary class="faq-q"><span>Est-ce un conseil médical ou nutritionnel ?</span><span class="tg">+</span></summary><div class="faq-a">Non. Accélérateur Intestinal 7X propose <strong>du contenu éducatif, des recettes et des guides d'habitudes</strong>. Ce n'est pas un conseil médical ni nutritionnel, ni un traitement, et cela ne remplace pas la consultation d'un professionnel de santé.</div></details>
-    <details class="faq"><summary class="faq-q"><span>Sur quels appareils ça fonctionne ?</span><span class="tg">+</span></summary><div class="faq-a">Sur n'importe quel appareil doté d'un navigateur — téléphone, tablette ou ordinateur. Tu n'as aucune application à télécharger.</div></details>
-  </div>
-
-  <!-- ═══ DISCLAIMER ═══ -->
-  <div class="disclaimer reveal">
-    <h4>Avis important</h4>
-    <p>Accélérateur Intestinal 7X est un contenu éducatif (recettes et guides d'habitudes). Ce n'est pas un conseil médical ni nutritionnel, ni un traitement, et cela ne remplace pas la consultation d'un professionnel de santé. Les résultats varient d'une personne à l'autre et dépendent de chaque cas. Consulte ton médecin avant de modifier ton alimentation ou ton mode de vie, en particulier si tu es enceinte, si tu allaites, ou si tu as un problème de santé.</p>
-  </div>
-
-  <!-- ═══ CTA FINAL ═══ -->
-  <div class="band reveal">
-    <h2>Commence ton protocole de 30 jours aujourd'hui</h2>
-    <p>Accès immédiat, dans le navigateur, avec une garantie de 60 jours sans justification.</p>
-    <a href="https://www.checkout-ds24.com/answer/yes?template=light" class="cta">Ajouter à ma commande — 37 €</a>
-      <a href="https://www.digistore24.com/answer/no" class="cta-decline">Non merci — continuer sans cette offre</a>
-  </div>
-
-  <!-- ═══ SOPORTE ═══ -->
-  <div class="support reveal">
-    <div class="s-emoji">💚</div>
-    <h4>Nous sommes là pour t'aider</h4>
-    <p>Tu as une question, besoin d'aide pour ton accès ou tu souhaites un remboursement ? Nous répondons sous 24 heures.</p>
-    <a href="mailto:contact.stylomaisonapp@gmail.com"><svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>contact.stylomaisonapp@gmail.com</a>
-  </div>
-
-  <!-- ═══ FOOTER ═══ -->
+  <!-- ═══ 9 · PIED DE PAGE LÉGAL ═══ -->
   <div class="foot">
-    <p class="foot-links"><a href="/app/remboursement/">Remboursement</a> · <a href="/app/conditions/">Conditions</a> · <a href="/app/confidentialite/">Confidentialité</a></p>
-    <p>Tu préfères ne plus recevoir nos e-mails ? Tu peux te désinscrire à tout moment avec le lien situé en bas de chaque e-mail, ou en nous écrivant à <a href="mailto:contact.stylomaisonapp@gmail.com">contact.stylomaisonapp@gmail.com</a>.</p>
-    <p>© 2026 Accélérateur Intestinal 7X · Tous droits réservés<br>Ce paiement apparaîtra sur ton relevé bancaire comme <strong>D24 - Order ID</strong></p>
+    <p class="disclaimer">Accélérateur Intestinal 7X est une application web de contenu informatif et éducatif&nbsp;: recettes et guides d'habitudes alimentaires. Ce n'est pas un conseil médical ni nutritionnel, ni un traitement, et aucun résultat individuel n'est garanti.</p>
+    <p class="links">
+      <a href="https://sante24h.site/app/conditions/">Conditions</a> &middot;
+      <a href="https://sante24h.site/app/confidentialite/">Confidentialité</a> &middot;
+      <a href="https://sante24h.site/app/remboursement/">Remboursement</a>
+    </p>
+    <p class="legal">
+      Une question&nbsp;? <a href="mailto:contact.stylomaisonapp@gmail.com">contact.stylomaisonapp@gmail.com</a> — réponse sous 24 heures.<br>
+      Ta commande est conclue avec <strong>Digistore24 MSLW Limited</strong> (Ormond Building, 31-36 Ormond Quay Upper, D07 EE37 Dublin 7, Irlande), qui vend le produit en son nom propre et se charge du paiement, de la facturation et des remboursements. Le débit apparaît sur ton relevé bancaire sous la mention <strong>D24 - Order ID</strong>. Prix TTC.<br>
+      © 2026 Stylo Maison App · Tous droits réservés
+    </p>
+  </div>
+
+  <!-- ═══ BARRE FIXE ═══
+       Réécrite elle aussi par le digistore.js : l'attribut hidden ne retire pas
+       le lien du DOM, et le repli sur mousedown (capture) reste actif. Les deux
+       boutons portent donc le même identifiant de session. -->
+  <div class="sticky" id="stickyBar" hidden>
+    <div class="inner">
+      <a class="btn" href="https://www.checkout-ds24.com/answer/yes?template=light">
+        OUI — JE LA PRENDS À 37 €
+      </a>
+    </div>
   </div>
 
 </div>
 
 <script>
-  var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target);}});},{threshold:.12,rootMargin:'0px 0px -6% 0px'});
-  document.querySelectorAll('.reveal:not(.in)').forEach(function(el){io.observe(el);});
+(function(){
+  var reduce = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+  /* ════════ PAGE D'OFFRE ════════ */
+  var started = false;
+  function startPage(){
+    if(started) return; started = true;
+
+    /* ── 1 · Barre de progression ── */
+    var fill = document.getElementById('progressFill');
+    function progress(){
+      if(!fill) return;
+      var h = document.documentElement.scrollHeight - window.innerHeight;
+      var pct = h > 0 ? (window.pageYOffset / h) * 100 : 100;
+      fill.style.width = Math.min(100, Math.max(0, pct)) + '%';
+    }
+
+    /* ── 2 · Flèche « continue » ── */
+    var cue = document.getElementById('scrollCue');
+    var cueGone = false;
+    function hideCue(){
+      if(cueGone || !cue) return;
+      if(window.pageYOffset > 60){
+        cueGone = true;
+        cue.classList.add('gone');
+        setTimeout(function(){ cue.style.display = 'none'; }, 450);
+      }
+    }
+
+    /* ── 3 · Barre fixe ──
+       Apparaît après le bloc prix, puis s'efface dès que le bouton principal
+       est à l'écran (pour ne jamais afficher deux boutons en même temps). */
+    var bar = document.getElementById('stickyBar');
+    var anchor = document.querySelector('.price-box');
+    var mainBtn = document.querySelector('.cta-block .btn');
+    function sticky(){
+      if(!bar || !anchor) return;
+      var passed = anchor.getBoundingClientRect().bottom < 0;
+      var mainVisible = false;
+      if(mainBtn){
+        var r = mainBtn.getBoundingClientRect();
+        mainVisible = r.top < (window.innerHeight - 30) && r.bottom > 0;
+      }
+      bar.hidden = !(passed && !mainVisible);
+    }
+
+    window.addEventListener('scroll', function(){
+      progress(); hideCue(); sticky();
+    }, {passive:true});
+    window.addEventListener('resize', progress, {passive:true});
+    progress(); sticky();
+
+    /* ── 4 · Révélation au défilement ── */
+    var blocks = document.querySelectorAll('.rv');
+    if(reduce || !('IntersectionObserver' in window)){
+      for(var i=0;i<blocks.length;i++) blocks[i].classList.add('on');
+      return;
+    }
+    document.body.classList.add('js-reveal');
+    var io = new IntersectionObserver(function(entries){
+      entries.forEach(function(e){
+        if(e.isIntersecting){ e.target.classList.add('on'); io.unobserve(e.target); }
+      });
+    }, {rootMargin:'0px 0px -12% 0px', threshold:0.05});
+    for(var j=0;j<blocks.length;j++) io.observe(blocks[j]);
+
+    /* Filet de sécurité : si quelque chose casse, tout s'affiche au bout de 3 s */
+    setTimeout(function(){
+      for(var k=0;k<blocks.length;k++) blocks[k].classList.add('on');
+    }, 3000);
+  }
+
+  /* ════════ ÉCRAN DE RÉVÉLATION DE LA REMISE ════════ */
+  var slot = document.getElementById('screenSlot');
+  var closed = false;
+  function closeSlot(){
+    if(closed) return; closed = true;
+    document.body.classList.remove('slot-on');
+    if(slot) slot.hidden = true;
+    startPage();
+  }
+
+  /* Sans JavaScript, sans l'écran, ou en mode animations réduites :
+     l'offre s'affiche directement. */
+  if(!slot || reduce){
+    startPage();
+    return;
+  }
+
+  try{
+    document.body.classList.add('slot-on');
+    slot.hidden = false;
+
+    var skip = document.getElementById('slotSkip');
+    if(skip) skip.addEventListener('click', closeSlot);
+
+    /* Filet de sécurité : quoi qu'il arrive, l'offre apparaît en 6 s */
+    setTimeout(closeSlot, 6000);
+
+    var cfgs = [
+      { id:'reel1', items:['🔑','⭐','🎁','🔐','💶','🎯'], end:'🔓', cls:'' },
+      { id:'reel2', items:['💰','🏆','⭐','🎁','🎯','💶'], end:'−20 €', cls:' amount' },
+      { id:'reel3', items:['❗','❓','🎯','🎁','⭐','💶'], end:'✅', cls:'' }
+    ];
+
+    var reels = [];
+    cfgs.forEach(function(cfg){
+      var el = document.getElementById(cfg.id);
+      if(!el) return;
+      var idx = 0;
+      var iv = setInterval(function(){
+        idx = (idx + 1) % cfg.items.length;
+        el.innerHTML = '<div class="reel-item">' + cfg.items[idx] + '</div>';
+      }, 80);
+      reels.push({ iv:iv, cfg:cfg, el:el });
+    });
+
+    function stopReel(i){
+      var r = reels[i];
+      if(!r) return;
+      clearInterval(r.iv);
+      r.el.innerHTML = '<div class="reel-item' + r.cfg.cls + '">' + r.cfg.end + '</div>';
+      r.el.classList.add('win');
+    }
+
+    setTimeout(function(){ stopReel(0); }, 1000);
+    setTimeout(function(){ stopReel(1); }, 1450);
+    setTimeout(function(){
+      stopReel(2);
+      setTimeout(function(){
+        var pre  = document.getElementById('slotPre');
+        var post = document.getElementById('slotPost');
+        if(pre)  pre.hidden = true;
+        if(post) post.hidden = false;
+        setTimeout(closeSlot, 1700);
+      }, 320);
+    }, 1900);
+  }catch(err){
+    closeSlot();
+  }
+})();
 </script>
+
+<!-- UTMify — pixel + propagateur d'UTM.
+     Le pixel envoie l'achat des upsells à Facebook (il lit upsell_N_amount dans
+     l'URL de l'étape suivante). Sans lui, Meta ne voit que la vente principale,
+     sous-estime la valeur du client et fait monter le coût des enchères.
+
+     ⚠️ La règle de checkout du compte UTMify doit être « ds24.com/product »,
+     jamais « ds24.com » : sinon le pixel intercepte le clic sur les liens
+     .../answer/<sid>/yes (preventDefault + délégation sans l'événement), la
+     navigation meurt et le bouton « Oui » demande plusieurs clics.
+
+     ⚠️ Le tableau de bord FR n'est pas encore confirmé : remplacer le marqueur
+     ci-dessous par le pixelId du compte français avant la mise en ligne. -->
+<script>
+  window.pixelId = "COLE_AQUI_O_PIXELID_UTMIFY_FR";
+  var a = document.createElement("script");
+  a.setAttribute("async", "");
+  a.setAttribute("defer", "");
+  a.setAttribute("src", "https://cdn.utmify.com.br/scripts/pixel/pixel.js");
+  document.head.appendChild(a);
+</script>
+
+<script
+  src="https://cdn.utmify.com.br/scripts/utms/latest.js"
+  data-utmify-prevent-xcod-sck
+  data-utmify-prevent-subids
+  async
+  defer
+></script>
+
+<!-- Microsoft Clarity -->
+<script type="text/javascript">
+    (function(c,l,a,r,i,t,y){
+        c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+        t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+        y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+    })(window, document, "clarity", "script", "xg0blz4d7p");
+</script>
+<!-- End Microsoft Clarity -->
 
 </body>
 </html>
