@@ -433,30 +433,22 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     </div>
 
     <!-- ═══ 8 · APPEL À L'ACTION ═══ -->
-    <div class="cta-block rv">
+    <div class="cta-block rv" id="offer">
       <p class="punch" style="margin-top:0">Tu as déjà payé la partie la plus chère.<br>Là, c'est 37 € pour ne pas avoir à t'organiser toute seule.</p>
 
-      <!-- OUI — le digistore.js réécrit ce lien en /answer/&lt;session_id&gt;/yes.
-           Aucun payplan : la chaîne de requête survit à la réécriture. -->
-      <a class="btn" href="https://www.checkout-ds24.com/answer/yes?template=light">
-        OUI — JE LA PRENDS À 37 €
-      </a>
+      <!-- Widget de décision Digistore (OUI/NON) — 1-clic conforme UE.
+           digistoreUpsell() (dans le <head>) pose l'ID de session ; le widget
+           l'utilise. Ne s'affiche qu'avec une vraie session d'upsell du checkout. -->
+      <digistore-upsell-button template="dark"></digistore-upsell-button>
       <p class="btn-note">Un seul clic. Tu n'as pas à ressaisir ta carte.</p>
-
-      <!-- NON — doit exister et pointer ailleurs que le lien d'acceptation.
-           Si la page n'a qu'un « yes », le digistore.js injecte lui-même un
-           cadre de refus par-dessus la page. -->
-      <a class="decline" href="https://www.digistore24.com/answer/no">Non merci, je continue sans l'application</a>
     </div>
 
   </div>
-  <!-- ═══ BARRE FIXE ═══
-       Réécrite elle aussi par le digistore.js : l'attribut hidden ne retire pas
-       le lien du DOM, et le repli sur mousedown (capture) reste actif. Les deux
-       boutons portent donc le même identifiant de session. -->
+  <!-- ═══ BARRE FIXE ═══ mène au widget de décision (elle ne peut plus être un
+       bouton d'achat : le seul point d'achat conforme est le widget). -->
   <div class="sticky" id="stickyBar" hidden>
     <div class="inner">
-      <a class="btn" href="https://www.checkout-ds24.com/answer/yes?template=light">
+      <a class="btn" href="#offer">
         OUI — JE LA PRENDS À 37 €
       </a>
     </div>

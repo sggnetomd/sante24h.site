@@ -205,13 +205,11 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <p class="same">Rien n'a été retiré parce que le prix baisse. <strong>C'est le même accès</strong> — seul le montant change.</p>
 
     <div class="cta-zone">
-      <!-- OUI — digistore.js réécrit ce lien en /answer/<session_id>/yes.
-           Ne jamais y ajouter de paramètre payplan. -->
-      <a class="btn" href="https://www.checkout-ds24.com/answer/yes?template=light">Oui, je la veux à 19 €</a>
+      <!-- Widget de décision Digistore (OUI/NON) — 1-clic conforme UE.
+           digistoreUpsell() (dans le <head>) pose l'ID de session ; le widget
+           l'utilise. Ne s'affiche qu'avec une vraie session d'upsell du checkout. -->
+      <digistore-upsell-button template="dark"></digistore-upsell-button>
       <p class="btn-note">Un seul clic. Tu n'as pas à ressaisir ta carte.</p>
-
-      <!-- NON — doit rester présent et pointer vers une URL différente du bouton « oui ». -->
-      <a class="decline" href="https://www.digistore24.com/answer/no">Non merci, je continue sans la lotion.</a>
     </div>
 
     <div class="guar">

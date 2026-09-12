@@ -33,53 +33,10 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <link rel="dns-prefetch" href="https://license.vturb.com">
 <!-- End Otimizar Velocidade de Carregamento VTurb -->
 
-<!-- Digistore24 upsell en 1 clic : reecrit les liens answer/yes et answer/no avec l identifiant de session -->
+<!-- Digistore24 : pose l'ID de session d'upsell, lu ensuite par le widget
+     <digistore-upsell-button> pour afficher les boutons OUI/NON. -->
 <script src="https://www.digistore24-scripts.com/service/digistore.js"></script>
 <script>digistoreUpsell()</script>
-
-<!-- ── RETOUR ARRIERE — le bouton Precedent suit le meme chemin que le lien de refus ──
-     Deux regles imposees par Digistore :
-
-     1. DESTINATION. Il ne faut JAMAIS pointer vers l URL fixe de la page
-        suivante : c est Digistore qui decide l etape suivante, via
-        /answer/<session>/no. Sauter directement vers une page laisserait la
-        session bloquee sur cette etape, et le answer/yes suivant resoudrait
-        vers le mauvais produit. On lit donc le href du bouton de refus.
-
-     2. LE HREF EST DEJA PRET. digistore.js reecrit `answer/no` en
-        `answer/<session>/no` au chargement. En lisant le href au lieu de
-        reconstruire l URL, le format ne peut pas etre errone.
-
-     Securite : sans session ni bouton, AUCUNE redirection — le bouton
-     Precedent redevient normal. Mieux vaut perdre ce comportement que
-     d enfermer l acheteuse sur une page.
-
-     location.replace (et non href) : ne passe pas par l intercepteur de clic
-     d UTMify. -->
-<script>
-(function () {
-  var redirige = false;
-  function destinationDuRefus() {
-    var a = document.querySelector('a[href*="/answer/"][href*="/no"]')
-         || document.querySelector('a[href$="/answer/no"]');
-    if (a) {
-      var href = a.getAttribute("href");
-      if (/\/answer\/[^/]+\/no/.test(href)) return href;   // deja injecte
-    }
-    var s = window.DS24_UPSELL_SESSION_ID;
-    return s ? "https://www.checkout-ds24.com/answer/" + s + "/no" : null;
-  }
-  history.pushState({ br: 1 }, "", location.href);
-  history.pushState({ br: 1 }, "", location.href);
-  window.addEventListener("popstate", function () {
-    if (redirige) return;
-    var destination = destinationDuRefus();
-    if (!destination) return;
-    redirige = true;
-    location.replace(destination);
-  });
-})();
-</script>
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -311,18 +268,14 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   </script>
 
   <!-- ── BLOC AVEC DELAI (apparait au moment du pitch) ──
-       Achat en 1 clic : digistore.js reecrit les deux href avec l identifiant de
-       session. Les deux liens ne doivent JAMAIS pointer vers la meme URL, et le
-       lien de refus ne doit jamais etre retire. -->
+       Widget de décision de la Digistore (boutons OUI/NON), obligatoire pour le
+       1-clic dans l'UE. digistoreUpsell() (dans le <head>) pose l'ID de session ;
+       le widget lit cet ID et affiche les boutons via une iframe Digistore.
+       NB : le widget ne s'affiche qu'avec une vraie session d'upsell venue du
+       checkout — vide en prévisualisation locale. -->
   <div class="hide" id="ctaBlock" aria-hidden="true">
     <div class="offer">
-      <a href="https://www.checkout-ds24.com/answer/yes?template=light" class="cta cta-pulse">
-        Je veux maigrir 10x plus vite avec le protocole detox
-      </a>
-
-      <a href="https://www.digistore24.com/answer/no" class="decline">
-        Non, je préfère suivre le chemin le plus long et renoncer à optimiser mes résultats.
-      </a>
+      <digistore-upsell-button template="dark"></digistore-upsell-button>
     </div>
   </div>
 

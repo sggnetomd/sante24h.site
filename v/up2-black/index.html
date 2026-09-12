@@ -384,7 +384,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
   <!-- ═══ 6 · CTA #1 — AVANT MÊME D'EXPLIQUER LE PRODUIT ═══ -->
   <div class="cta-block rv">
-    <a class="btn" href="https://www.checkout-ds24.com/answer/yes?template=light">
+    <a class="btn" href="#offer">
       OUI — JE VEUX PROTÉGER MA PEAU
     </a>
     <p class="btn-note">Un seul clic. Tu n'as pas à ressaisir ta carte.</p>
@@ -412,12 +412,12 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <p class="never">Sans abonnement, sans reconduction.<br>Débloqué immédiatement dans ton application.</p>
   </div>
 
-  <div class="cta-block rv">
-    <a class="btn" href="https://www.checkout-ds24.com/answer/yes?template=light">
-      AJOUTER LA LOTION — 37 €
-    </a>
+  <div class="cta-block rv" id="offer">
+    <!-- Widget de décision Digistore (OUI/NON) — 1-clic conforme UE.
+         digistoreUpsell() (dans le <head>) pose l'ID de session ; le widget
+         l'utilise. Ne s'affiche qu'avec une vraie session d'upsell du checkout. -->
+    <digistore-upsell-button template="dark"></digistore-upsell-button>
     <p class="btn-note">Un seul clic. Tu n'as pas à ressaisir ta carte.</p>
-    <a class="decline" href="https://www.digistore24.com/answer/no">Non merci — je continue sans la Lotion</a>
   </div>
 
   <hr class="rule">
@@ -528,11 +528,10 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   <div class="cta-block rv">
     <p class="punch" style="margin-top:0">Les kilos, le protocole s'en charge.<br>Ce qui se décide ici, c'est la peau que tu auras en les perdant.</p>
 
-    <a class="btn" href="https://www.checkout-ds24.com/answer/yes?template=light">
+    <a class="btn" href="#offer">
       OUI — J'AJOUTE LA LOTION POUR 37 €
     </a>
     <p class="btn-note">Paiement unique de 37 € TTC. Un seul clic, sans ressaisir ta carte.</p>
-    <a class="decline" href="https://www.digistore24.com/answer/no">Non merci — je continue sans la Lotion</a>
   </div>
 
   <!-- ═══ 14 · SCEAUX ═══ -->
@@ -570,10 +569,9 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   <p class="copy">Dix minutes par jour, et 37 € une seule fois.</p>
 
   <div class="cta-block rv">
-    <a class="btn" href="https://www.checkout-ds24.com/answer/yes?template=light">
+    <a class="btn" href="#offer">
       JE VEUX LA DEUXIÈME PHRASE — 37 €
     </a>
-    <a class="decline" href="https://www.digistore24.com/answer/no">Non merci — je prends le risque de la première</a>
   </div>
 
   <!-- ═══ 16 · SUPPORT ═══ -->
@@ -591,7 +589,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
      le même identifiant de session. -->
 <div class="sticky" id="stickyBar" hidden>
   <div class="inner">
-    <a class="btn" href="https://www.checkout-ds24.com/answer/yes?template=light">
+    <a class="btn" href="#offer">
       AJOUTER LA LOTION — 37 €
     </a>
   </div>
