@@ -1,103 +1,364 @@
-<!DOCTYPE html>
-<html lang="fr" dir="ltr"><head><title>Stylo Maison App</title><meta name="robots" content="noindex, nofollow"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,shrink-to-fit=no"><meta name="description" content="Présentation Stylo Maison App."><meta http-equiv="X-Content-Type-Options" content="nosniff"><meta http-equiv="X-XSS-Protection" content="1; mode=block"><meta name="referrer" content="strict-origin-when-cross-origin">
+<!doctype html>
+<html lang="fr" dir="ltr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="robots" content="noindex, nofollow">
 
-<!-- ====== RASTREAMENTO (padrao do cnn-vsl) ====== -->
-<!-- GTM: container unico da operacao, medido em salud24-deploy/cnn-vsl/index.html:13 -->
-<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'});
-var f=d.getElementsByTagName(s)[0],j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;
-j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);})
-(window,document,'script','dataLayer','GTM-TNLBBT5G');</script>
-<!-- UTMify: o dashboard do funil ES e 6a2dc2d082a16462e33bd463. O hub tem DEST_FR_UTMIFY
-     separado (worker-hub.js:183), entao o dashboard FR provavelmente e OUTRO — confirme
-     no painel antes de subir. -->
-<script>
-  window.pixelId = "COLE_AQUI_O_PIXELID_UTMIFY_FR";
-  var a = document.createElement("script");
-  a.setAttribute("async", ""); a.setAttribute("defer", "");
-  a.setAttribute("src", "https://cdn.utmify.com.br/scripts/pixel/pixel.js");
-  document.head.appendChild(a);
-</script>
-<script src="https://cdn.utmify.com.br/scripts/utms/latest.js" data-utmify-prevent-xcod-sck data-utmify-prevent-subids async defer></script>
-<!-- ====== /RASTREAMENTO ====== -->
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-TNLBBT5G');</script>
+<!-- End Google Tag Manager -->
+
+<!-- Otimizar Velocidade de Carregamento VTurb -->
+<script>!function(i,n){i._plt=i._plt||(n&&n.timeOrigin?n.timeOrigin+n.now():Date.now())}(window,performance);</script>
 <link rel="preload" href="https://scripts.converteai.net/65eee9f4-ec2d-46b0-a2b3-9b1ecf0653c2/ab-test/COLE_AQUI_O_ID_DO_AB_TEST/player.js" as="script">
 <link rel="preload" href="https://scripts.converteai.net/lib/js/smartplayer-wc/v4/smartplayer.js" as="script">
 <link rel="dns-prefetch" href="https://cdn.converteai.net">
 <link rel="dns-prefetch" href="https://scripts.converteai.net">
 <link rel="dns-prefetch" href="https://images.converteai.net">
 <link rel="dns-prefetch" href="https://m3u8.vturb.net">
-<link rel="dns-prefetch" href="https://license.vturb.com">  
+<link rel="dns-prefetch" href="https://license.vturb.com">
+<!-- End Otimizar Velocidade de Carregamento VTurb -->
 
+<title>Stylo Maison App</title>
+<meta name="description" content="-">
 
+<style>
+:root{ --news-bg:#020202; --red:#b42d1f; --fb-blue:#385898; --fb-link:#4267b2; --fb-time:#90949c; --ink:#1c1e21; --gray:#efefef; --red-bar:#de2800; }
+  *{margin:0;padding:0;box-sizing:border-box}
+  body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;color:var(--ink);line-height:1.4;background:#e4e6eb;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+  img{max-width:100%;height:auto;display:block}
+  /* DEVICE: coluna mobile fixa — PC/tablet renderiza IGUAL ao celular */
+  .device{max-width:440px;margin:0 auto;background:#fff;min-height:100vh;box-shadow:0 0 26px rgba(0,0,0,.10);overflow:hidden}
+  .wrap{max-width:100%;margin:0 auto;padding:0 16px}
 
+  /* ── [HEADLINE] copy principal ── */
+  .headline{font-size:21px;font-weight:800;line-height:1.25;margin:18px 0 8px;letter-spacing:-.3px;color:#111}
+  .headline .red,.disclaimer .red{color:var(--red)}
+  .disclaimer{font-size:11px;color:#555;margin-bottom:2px}
+  /* ── [VIDEO] ── */
+  .vsl{padding:16px 0 6px}
+  /* ── [VIEWERS] ── */
+  .viewers{text-align:center;font-size:16px;margin-top:16px}
+  .viewers b{color:var(--red);font-weight:700}
+  /* ── [COMENTARIOS] estilo Facebook (mesmo CSS da cnn-vsl) ── */
+  .comments{background:#fff;padding:8px 0 36px;margin-top:20px}
+  #fb-comments{font-family:"Segoe UI Historic","Segoe UI",Helvetica,Arial,sans-serif;font-size:13px;width:100%;margin:auto}
+  #fb-comments .comments-container{display:flex;flex-direction:column;gap:1.25em;border:.0625em solid #e9ebee;border-radius:1.25em;padding:1.25em}
+  .comments-title{font-size:17px;font-weight:700;color:#1c1e21;margin:0 0 12px;padding:0 2px}
+  .cmt-write{display:flex;align-items:center;gap:8px}
+  .cmt-write .cw-av{width:32px;height:32px;border-radius:50%;background:#dcdde1;flex-shrink:0}
+  .cmt-write .cw-box{flex:1;display:flex;align-items:center;justify-content:space-between;gap:8px;background:#f0f2f5;border-radius:16px;padding:8px 12px;color:#65676b;font-size:13px}
+  .cmt-write .cw-box svg{width:18px;height:18px;fill:#65676b;flex-shrink:0}
+  #fb-comments .comment{display:flex;align-items:flex-start;justify-content:flex-start;position:relative;width:100%;max-width:100%;gap:.625em}
+  #fb-comments .comment.answer{margin-left:3.625em;max-width:calc(100% - 3.625em);margin-bottom:.75em}
+  #fb-comments .comment.answer + .answer{margin-top:-.75em}
+  #fb-comments .comment .user-avatar{max-width:3em;max-height:3em;border-radius:1.5625em;object-fit:cover}
+  #fb-comments .comment .comment-data{width:100%}
+  #fb-comments .comment .comment-data .user{font-weight:400;color:#050505;border-radius:.75em;background-color:#f0f2f5;padding:.375em .75em .75em}
+  #fb-comments .comment .comment-data .user .name{margin:0;color:#365899;text-decoration:none;font-weight:700;font-size:14px;cursor:pointer;max-width:max-content}
+  #fb-comments .comment .comment-data .user .text{margin:0;font-weight:400;font-size:14px;color:#050505;width:fit-content;text-align:left}
+  #fb-comments .comment .comment-data .user .text span{color:#365899;font-weight:600}
+  #fb-comments .comment .comment-data .buttons{margin:.125em 0 0 .75em;display:flex;align-items:center;justify-content:flex-start;gap:.3125em}
+  #fb-comments .comment .comment-data .buttons time,
+  #fb-comments .comment .comment-data .buttons like,
+  #fb-comments .comment .comment-data .buttons answer,
+  #fb-comments .comment .comment-data .buttons span{font-size:.8em;color:#888;user-select:none}
+  #fb-comments .comment .comment-data .buttons like,
+  #fb-comments .comment .comment-data .buttons answer{font-weight:600;cursor:pointer}
+  #fb-comments .comment .comment-data .buttons like[liked]{color:#365899}
+  #fb-comments .comment .comment-data .buttons answer{cursor:default;position:relative}
+  #fb-comments .comment .comment-data .buttons answer:hover::after{content:"Vous ne pouvez pas commenter cette publication";position:absolute;left:50%;top:-.625em;width:13.5em;background-color:#f0f2f5;color:#4c4c4c;transform:translate(-50%,-100%);z-index:10;border-radius:.25em;padding:.375em;text-align:center;font-weight:400;box-shadow:.125em .125em .5em .125em rgba(0,0,0,.18)}
+  #fb-comments .comment .comment-data .buttons answer:hover::before{content:"";position:absolute;left:50%;top:-.625em;width:0;height:0;border-left:.5em solid transparent;border-right:.5em solid transparent;border-top:.5em solid #f0f2f5;z-index:11;transform:translateX(-50%);filter:drop-shadow(0 .1875em .125em rgba(0,0,0,.1))}
+  #fb-comments .comment likes{position:absolute;bottom:0;right:0;background-color:#fff;border:.125em solid #eaebef;display:flex;align-items:center;font-size:.875em;line-height:1;color:#888;border-radius:6.25em;padding:.0625em .25em .0625em 0}
+  #fb-comments .comment likes::before{content:url("data:image/svg+xml,%3Csvg%20xmlns%3D%27http%3A//www.w3.org/2000/svg%27%20width%3D%2738%27%20height%3D%2720%27%20viewBox%3D%270%200%2040%2020%27%3E%3Cdefs%3E%3ClinearGradient%20id%3D%27gb%27%20x1%3D%270%27%20y1%3D%270%27%20x2%3D%270%27%20y2%3D%271%27%3E%3Cstop%20offset%3D%270%27%20stop-color%3D%27%2318AFFF%27/%3E%3Cstop%20offset%3D%271%27%20stop-color%3D%27%230064E0%27/%3E%3C/linearGradient%3E%3ClinearGradient%20id%3D%27gr%27%20x1%3D%270%27%20y1%3D%270%27%20x2%3D%270%27%20y2%3D%271%27%3E%3Cstop%20offset%3D%270%27%20stop-color%3D%27%23FF7CA3%27/%3E%3Cstop%20offset%3D%271%27%20stop-color%3D%27%23E0203B%27/%3E%3C/linearGradient%3E%3C/defs%3E%3Ccircle%20cx%3D%2726%27%20cy%3D%2710%27%20r%3D%279.4%27%20fill%3D%27%23fff%27/%3E%3Ccircle%20cx%3D%2726%27%20cy%3D%2710%27%20r%3D%278.4%27%20fill%3D%27url%28%23gr%29%27/%3E%3Cpath%20fill%3D%27%23fff%27%20transform%3D%27translate%2820.5%2C4.7%29%20scale%280.46%29%27%20d%3D%27M12%2021.35l-1.45-1.32C5.4%2015.36%202%2012.28%202%208.5%202%205.42%204.42%203%207.5%203c1.74%200%203.41.81%204.5%202.09C13.09%203.81%2014.76%203%2016.5%203%2019.58%203%2022%205.42%2022%208.5c0%203.78-3.4%206.86-8.55%2011.54L12%2021.35z%27/%3E%3Ccircle%20cx%3D%2711%27%20cy%3D%2710%27%20r%3D%279.4%27%20fill%3D%27%23fff%27/%3E%3Ccircle%20cx%3D%2711%27%20cy%3D%2710%27%20r%3D%278.4%27%20fill%3D%27url%28%23gb%29%27/%3E%3Cpath%20fill%3D%27%23fff%27%20transform%3D%27translate%285.7%2C5%29%20scale%280.44%29%27%20d%3D%27M1%2021h4V9H1v12zm22-11c0-1.1-.9-2-2-2h-6.31l.95-4.57.03-.32c0-.41-.17-.79-.44-1.06L14.17%201%207.59%207.59C7.22%207.95%207%208.45%207%209v10c0%201.1.9%202%202%202h9c.83%200%201.54-.5%201.84-1.22l3.02-7.05c.09-.23.14-.47.14-.73v-2z%27/%3E%3C/svg%3E");cursor:pointer}
+  /* ── [TOPBAR] barra de selecao (substitui o header CNN) ── */
+  .topbar{background:var(--red-bar);color:#fff;padding:14px 16px;text-align:center;font-size:15px;line-height:1.5}
+  .topbar b{font-weight:700}
 
+  /* ── [FOOTER] ── */
+  .site-footer{background:#292929;color:#fff;padding:28px 16px;text-align:center;font-size:13px;line-height:1.7}
+  .site-footer p{margin:0 0 8px}
+  .site-footer .legal-nav{margin:10px 0}
+  .site-footer a{color:#fff;text-decoration:underline}
+  .site-footer .fine{opacity:.75;font-size:12px;line-height:1.6;margin-top:12px}
+</style>
+</head>
 
+<body>
 
-<style type="text/css" media="all">:root{--white:#ffffff}.a-cloned .a-c-cont{width:100%}.a-cloned>.a-b-o-cont>.a-o-cont>.a-cont{justify-content:center;align-items:center}html{scroll-behavior:smooth}body{font-family:Roboto,sans-serif;min-height:100vh;-webkit-font-smoothing:antialiased;overflow-x:hidden}*,::after,::before,body{margin:0;padding:0;box-sizing:border-box}.a-q-comp-cont{width:100%}.ql-align-left{text-align:left}.ql-align-center{text-align:center}.ql-align-right{text-align:right}.ql-align-justify{text-align:justify}.atomicat-interactive-quiz-progress{margin:20px auto;padding:0;max-width:28rem;height:10px;overflow:hidden;position:relative;border-radius:1rem}.atomicat-interactive-quiz-progress.atomicat-margin-top-zero{margin-top:0}.a-txt-extra{padding:1rem;border-radius:.375rem;line-height:1.4;font-size:16px;font-weight:400}.a-txt-timer{line-height:1.25;text-align:center;padding-left:1.25rem;padding-right:1.25rem}.a-txt-extra,.a-txt-extra.a-danger{color:rgb(185 28 28);background-color:rgb(254 226 226)}.a-txt-extra.a-danger.a-highlight{color:rgb(254 242 242);background-color:rgb(220 38 38)}.a-txt-extra.a-info{color:rgb(29 78 216);background-color:rgb(219 234 254)}.a-txt-extra.a-info.a-highlight{color:rgb(239 246 255);background-color:rgb(37 99 235)}.a-txt-extra.a-success{color:rgb(21 128 61);background-color:rgb(220 252 231)}.a-txt-extra.a-success.a-highlight{color:rgb(240 253 244);background-color:rgb(22 163 74)}.a-txt-extra.a-warning{color:rgb(161 98 7);background-color:rgb(254 249 195)}.a-txt-extra.a-warning.a-highlight{color:rgb(66 32 6);background-color:rgb(250 204 21)}.a-txt-extra.a-light{color:rgb(63 63 70);background-color:rgb(244 244 245)}.a-txt-extra.a-light.a-highlight{color:rgb(250 250 250);background-color:rgb(82 82 91)}.a-hidden{display:none}button{border:none;outline:0;background:0 0;font-family:"Space Grotesk",sans-serif;cursor:pointer}.atomicat-interactive-quiz-bar-bg{opacity:.1;width:100%}.atomicat-interactive-quiz-bar,.atomicat-interactive-quiz-bar-bg{height:100%;background:var(--a-g-theme-color,#6495ed);transition-duration:.7s;position:absolute;top:0;left:0}a{color:inherit;text-decoration:inherit}.atomi-h1{font-size:36px}.atomi-h2{font-size:30px}.atomi-h3{font-size:24px}.atomi-h4{font-size:20px}.atomi-h5{font-size:18px}.atomi-h6{font-size:16px}h1{font-size:2em}h1,h2,h3,h4,h5,h6{font-weight:inherit}.a-g-m-t,[class*=atomicat-modal-trigger]{cursor:pointer}.atomicat-cursor-pointer{cursor:pointer}.a-o-cont.atomicat-unfold,.atomicat-unfold{overflow:hidden;height:200px;align-items:start;position:relative;transition:height 4s ease-in-out}.a-o-cont.atomicat-unfold-transition{transition:height .5s ease-in-out}.a-b-cont{word-wrap:break-word}.atomicat-unfold-button{cursor:pointer;display:block;position:relative;z-index:1;background:0 0;border:none;padding:10px;text-decoration:underline}.atomicat-unfold::after{content:"";position:absolute;bottom:0;left:0;right:0;background:-webkit-gradient(linear,left top,left bottom,from(rgba(255,255,255,0)),to(white));background:linear-gradient(rgba(255,255,255,0),#fff);transition:background .5s ease-in-out;z-index:1;height:100%}.atomicat-ribbon-container{--text:'MOST POPULAR';--first-color:#62baea;--second-color:#4a98bf;position:relative}.atomicat-ribbon-container .atomicat-ribbon{position:absolute;top:-10px;width:150px;height:150px;display:flex;justify-content:center;align-items:center;z-index:9;overflow:hidden}.a-b-o-cont.atomicat-infinite-entrance-animation,.a-e-cont.atomicat-infinite-entrance-animation{animation-iteration-count:infinite}.a-b-o-cont{width:100%;background-repeat:no-repeat;background-size:cover;background-position:center;max-width:100%;position:relative}.a-b-o-cont.a-b-o-cont--legacy-margin{margin:0 auto}.atomicat-ribbon-top-left{left:-10px}.atomicat-ribbon-top-left::before{transform:rotate(-45deg) translateY(-20px)}.atomicat-ribbon-top-left::after{left:0}.atomicat-ribbon-top-right{right:-10px}.atomicat-ribbon-top-right::before{transform:rotate(45deg) translateY(-20px)}.atomicat-ribbon-top-right::after{right:0}.atomicat-ribbon-bottom-left{left:-10px;bottom:-10px}.atomicat-ribbon-bottom-left::before{transform:rotate(45deg) translateY(-20px)}.atomicat-ribbon-bottom-left::after{left:0}.atomicat-ribbon-bottom-right{right:-10px;bottom:-10px}.atomicat-ribbon-bottom-right::before{transform:rotate(-45deg) translateY(-20px)}.atomicat-ribbon-bottom-right::after{right:0}.atomicat-ribbon-container .atomicat-ribbon::before{content:var(--text);position:absolute;width:150%;height:40px;background:var(--first-color);display:flex;justify-content:center;align-items:center;font-size:14px;font-weight:600;color:#fff;letter-spacing:.1em;box-shadow:0 5px 10px rgba(0,0,0,.1)}.atomicat-ribbon-container .atomicat-ribbon::after{content:'';position:absolute;bottom:0;width:10px;height:10px;background:var(--second-color);z-index:-1;box-shadow:140px -140px var(--second-color)}.atomicat-marquee{position:relative;display:flex}.atomicat-overflow-hidden{overflow:hidden}.atomicat-marquee-content{flex-shrink:0;display:flex;justify-content:space-around;min-width:100%}.atomicat-enable-animation .atomicat-marquee-content{animation:atomicat-marquee-animation 10s linear infinite}.atomicat-marquee-reverse .atomicat-marquee-content{animation-direction:reverse}.atomicat-marquee-alternate .atomicat-marquee-content{animation-direction:alternate}.atomicat-marquee-pause:hover .atomicat-marquee-content{animation-play-state:paused}@keyframes atomicat-marquee-animation{from{transform:translateX(0)}to{transform:translateX(-100%)}}.fadeIn{animation:fadeIn 1s ease-in-out}@keyframes fadeIn{from{opacity:0}to{opacity:1}}.fadeInUp{animation:fadeInUp 1s ease-in-out}@keyframes fadeInUp{from{opacity:0;transform:translateY(20px)}to{opacity:1;transform:translateY(0)}}.fadeInDown{animation:fadeInDown 1s ease-in-out}@keyframes fadeInDown{from{opacity:0;transform:translateY(-20px)}to{opacity:1;transform:translateY(0)}}.fadeInLeft{animation:fadeInLeft 1s ease-in-out}@keyframes fadeInLeft{from{opacity:0;transform:translateX(-20px)}to{opacity:1;transform:translateX(0)}}.fadeInRight{animation:fadeInRight 1s ease-in-out}@keyframes fadeInRight{from{opacity:0;transform:translateX(20px)}to{opacity:1;transform:translateX(0)}}.zoomIn{animation:zoomIn 1s ease-in-out}@keyframes zoomIn{from{opacity:0;transform:scale(.5)}to{opacity:1;transform:scale(1)}}.bounceIn{animation:bounceIn 1s ease-in-out}@keyframes bounceIn{0%{opacity:0;transform:scale(.3)}50%{opacity:1;transform:scale(1.05)}70%{transform:scale(.9)}100%{transform:scale(1)}}.swing{animation:swing 1s ease-in-out}@keyframes swing{20%{transform:rotate(15deg)}40%{transform:rotate(-10deg)}60%{transform:rotate(5deg)}80%{transform:rotate(-5deg)}100%{transform:rotate(0)}}.a-html-ele{width:18px;height:18px}.atomicat-page{background-color:red}.a-g-s-h,.atomicat-heading-title{font-family:Poppins,sans-serif}.a-g-s-t,.atomicat-heading-title>span,.atomicat-text,.atomicat-text>span{font-family:Roboto,sans-serif}.a-e-cont.a-btn>.a-btn,.a-g-s-b{font-family:Montserrat,sans-serif}.atomicat-fullheight{height:100%}.atomicat-disable-selection{user-select:none;-moz-user-select:none;-webkit-user-select:none;cursor:default}.atomicat-hidden{display:none}.a-r{position:relative}.a-r .atomicat-hidden,.atomicat-hidden.a-i-e-cont,.atomicat-hidden.a-r{display:none}.atomicat-hidden-on-publish{display:none}.a-r .atomicat-hidden-on-publish,.atomicat-hidden-on-publish.a-i-e-cont,.atomicat-hidden-on-publish.a-r{display:none}.atomicat-chosen-option{background:#ff0}.atomicat-fixed{position:fixed;top:0;left:0;z-index:20}.flex-row{display:flex}.flex-row-reverse{flex-direction:row-reverse}.flex-column-reverse{flex-direction:column-reverse}.flex-column{display:flex;flex-direction:column}.flex-row-all{display:flex;justify-content:center;align-items:center}.flex-column-all{display:flex;flex-direction:column;justify-content:center;align-items:center}.flex-row-reverse{flex-direction:row-reverse}.flex-column-reverse{flex-direction:column-reverse}.flex-row-between{display:flex;justify-content:space-between;align-items:center}.gap-1{gap:1rem}.flex-align-center{align-items:center}.flex-row-center{display:flex;justify-content:center;align-items:center}.flex-row-align-center{display:flex;align-items:center}.a-c-cont{max-width:100%;min-width:0}.atomicat-custom-embed iframe{max-width:100%;width:100%;margin:0;line-height:1;border:none}.a-c-f-w{width:100%}.a-e-cont{max-width:100%}.atomicat-transform-element{transform:perspective(var(--atomicat-transform-perspective,0)) rotate(var(--atomicat-transform-rotate-z,0)) rotateX(var(--atomicat-transform-rotate-x,0)) rotateY(var(--atomicat-transform-rotate-y,0)) translate(var(--atomicat-transform-translate,0)) translateX(var(--atomicat-transform-translate-x,0)) translateY(var(--atomicat-transform-translate-y,0)) scaleX(calc(var(--atomicat-transform-flip-x,1)* var(--atomicat-transform-scale-x,var(--atomicat-transform-scale,1)))) scaleY(calc(var(--atomicat-transform-flip-y,1)* var(--atomicat-transform-scale-y,var(--atomicat-transform-scale,1)))) skewX(var(--atomicat-transform-skew-x,0)) skewY(var(--atomicat-transform-skew-y,0));transform-origin:var(--atomicat-transform-origin-y) var(--atomicat-transform-origin-x);transition:background .3s,border .3s,border-radius .3s,box-shadow .3s,transform var(--atomicat-transform-transition-duration, .4s)}.a-e-cont.a-gmaps{overflow:hidden}.a-flex{display:flex}.atomicat-emoji{width:65px}.atomica-emoji-unicode{font-size:65px}.a-f-c{display:flex;flex-direction:column}.a-flex-start{align-self:flex-start}.a-flex-end{align-self:flex-end}.a-flex-center{align-self:center}.a-flex-wrapper{display:flex;flex-direction:column;width:100%}.a-o-cont{display:flex;width:100%;align-items:center;max-width:100%;background-repeat:no-repeat;background-size:cover;background-position:center}.a-o-cont{height:100%;margin:0 auto}.a-acc-cont{position:relative}.a-i-e-cont{transition:height .5s ease-in-out,background .5s ease-in-out}.a-o-cont.a-cont-b>.a-cont{max-width:1140px}.a-o-cont.a-cont-f-w>.a-cont{max-width:100%}.a-o-cont .a-cont{flex-direction:column}.a-b-cont>.a-o-cont{margin:0 auto}.atomicat-divider-flex{display:flex;justify-content:center;align-items:center;margin:15px 0;gap:.5rem}.atomicat-divider-flex .atomicat-content{border-bottom:2px solid #000;width:50%}.atomicat-border-bottom{border-bottom:1.5px solid #e6e8ea}.atomicat-border-top{border-top:1.5px solid #e6e8ea}.a-cont{display:flex;margin:0 auto;font-weight:600;width:100%}.atomicat-hidden-tablet{display:block}.atomicat-hidden-mobile{display:block}.atomicat-hidden-desktop{display:none}@media screen and (max-width:1024px){.atomicat-hidden-mobile{display:block}.atomicat-hidden-desktop{display:block}.atomicat-hidden-tablet{display:none}}@media screen and (max-width:480px){.a-o-cont.a-cont-b>.a-cont{grid-template-columns:repeat(1,1fr)}.atomicat-hidden-tablet{display:block}.atomicat-hidden-desktop{display:block}.atomicat-hidden-mobile{display:none}.a-cont{flex-wrap:wrap}}@media (min-width:768px){.atomicat-column[data-col="10"]{width:10%}.atomicat-column[data-col="11"]{width:11.111%}.atomicat-column[data-col="12"]{width:12.5%}.atomicat-column[data-col="14"]{width:14.285%}.atomicat-column[data-col="16"]{width:16.666%}.atomicat-column[data-col="20"]{width:20%}.atomicat-column[data-col="25"]{width:25%}.atomicat-column[data-col="30"]{width:30%}.atomicat-column[data-col="33"]{width:33.333%}.atomicat-column[data-col="40"]{width:40%}.atomicat-column[data-col="50"]{width:50%}.atomicat-column[data-col="60"]{width:60%}.atomicat-column[data-col="66"]{width:66.666%}.atomicat-column[data-col="70"]{width:70%}.atomicat-column[data-col="75"]{width:75%}.atomicat-column[data-col="80"]{width:80%}.atomicat-column[data-col="83"]{width:83.333%}.atomicat-column[data-col="90"]{width:90%}.atomicat-column[data-col="100"]{width:100%}}.flexBox{display:flex;flex-direction:column;gap:8px}.a-co{border-radius:12px;padding:8px}.a-co .a-fb-img img{width:100%;height:100%}.a-co .a-fb-img{max-width:300px}.a-co-f{border-top:1px solid #e9ebee;padding-bottom:8px;padding-top:8px}.a-co-f .a-co-fc{display:flex;align-items:center;gap:5px}.a-co-f .a-co-fc .a-co-fb{width:14px;height:14px}.a-co-f .a-co-fc .a-co-ft{color:#385898;font-weight:600;font-family:Helvetica,Arial,sans-serif;font-size:11px}.a-co-h{border-bottom:1px solid #e9ebee;padding-bottom:20px}.a-co-h .a-co-hc{display:flex;align-items:center;gap:5px}.a-co-h .a-co-hc .a-co-ht{font-weight:600;font-family:Helvetica,Arial,sans-serif;font-size:14px}@media screen and (max-width:480px){.a-fb .a-fb-misc{flex-direction:column}.a-co .a-fb .a-fb-text{width:90%}}.a-fb{width:100%}.a-fb .a-fb-parent{display:flex;align-items:flex-start;gap:8px}.a-fb .a-fb-thumb{width:48px;height:48px;object-fit:cover;border-width:2px;overflow:hidden}.a-fb .a-fb-thumb-child{width:36px;height:36px}.a-fb .a-fb-thumb-img{width:100%;height:100%}.a-fb .a-fb-info{width:100%}.a-fb .a-fb-text{width:100%;font-family:Helvetica,Arial,sans-serif}.a-fb .a-fb-user{color:#385898;font-weight:600;font-size:14px;line-height:1.358;text-transform:capitalize;word-break:break-word}.a-fb .a-fb-comm{color:#1c1e21;line-height:19.12px;margin-top:4px;margin-bottom:6px;font-size:14px;font-weight:400;word-break:break-word}.a-fb .a-fb-misc{display:flex;justify-content:space-between}.a-fb .a-fb-misc-left{display:flex;line-height:16px;gap:4px}.a-fb .a-fb-misc-txt,.a-fb .a-fb-time{font-weight:400;font-size:12px;font-family:Helvetica,Arial,sans-serif;cursor:pointer;color:#4267b2}.a-fb .a-fb-time{color:#90949c}.a-fb .a-fb-misc-txt p{color:#4267b2}.a-fb .a-fb-dot{font-weight:400;font-size:12px}.a-fb .a-fb-misc-txt:hover{text-decoration-line:underline}.a-fb .a-fb-likes{display:flex;align-items:center;gap:4px;color:#1c1e21}.a-fb .a-fb-likes .a-fb-like-img{width:14px;height:14px;display:block;margin-top:-2px}.a-fb .a-fb-likes .a-fb-heart-img{width:20px;margin-left:4px;margin-right:2px}.a-fb .a-fb-likes span{font-size:12px;font-weight:400}.a-fb .a-fb-children{margin-left:48px;border-left:1px dotted #d3d6db;padding-left:8px;display:flex;flex-direction:column;gap:4px}.a-fb .a-fb-child{display:flex;align-items:flex-start;gap:8px}.a-yt .a-yt-parent{display:flex;align-items:flex-start;gap:8px;font-family:Roboto,Arial,sans-serif}.a-yt .a-yt-thumb{width:28px;height:28px;object-fit:cover;border-radius:50%;border-width:2px;overflow:hidden}.a-yt .a-yt-reply-mob img{width:14px}@media (min-width:768px){.a-yt .a-yt-reply-mob img{display:none}.a-yt .a-yt-reply-pc{display:block}}@media (max-width:767px){.a-yt .a-yt-reply-pc{display:none}}.a-yt .a-yt-reply-pc{font-size:12px;font-weight:500;color:#0f0f10}.a-yt .a-yt-thumb-img{width:100%;height:100%}.a-yt .a-yt-info{width:84%}.a-yt .a-yt-text{width:100%;padding:0 10px 10px}.a-yt .a-yt-user{font-weight:400;font-size:13px;color:#606060;display:flex;align-items:center;word-break:break-word}.a-yt .a-yt-user span{font-weight:400;color:#606060;margin-left:6px;font-size:12px;word-break:break-word}.a-yt .a-yt-dim{font-weight:400;font-size:12px;opacity:.6}.a-yt .a-yt-comm{margin-top:8px;font-size:14px;font-weight:400;word-break:break-word}.a-yt .a-yt-misc{display:flex;justify-content:space-between;padding:10px;margin-top:-8px}.a-yt .a-yt-misc .a-yt-unlike{transform:rotate(180deg)}.a-yt .a-yt-misc-left{display:flex;align-items:center;gap:24px}.a-yt .a-yt-misc-txt{font-weight:500}.a-yt .a-yt-children{padding-left:56px;display:flex;flex-direction:column;gap:4px}.a-yt .a-yt-child{display:flex;align-items:flex-start;gap:8px}.a-yt .gapHalf{gap:4px}.a-yt .gap1{gap:24px}.a-ft{text-align:center;font-size:20px;color:#000;word-break:break-all}.a-ft-i{margin-top:calc(15px / 2)}.atomicat-tooltip-trigger:hover .atomicat-tooltip{opacity:1;z-index:1;cursor:pointer}.a-c-cont .atomicat-tooltip-trigger{overflow:visible;position:relative;cursor:pointer}.atomicat-tooltip-trigger:hover .atomicat-tooltip-top{animation:atomicat-tooltip-topin .3s linear}.atomicat-tooltip-trigger:hover .atomicat-tooltip-right{animation:atomicat-tooltip-rightin .3s linear}.atomicat-tooltip-trigger:hover .atomicat-tooltip-bottom{animation:atomicat-tooltip-bottomin .3s linear}.atomicat-tooltip-trigger:hover .atomicat-tooltip-left{animation:atomicat-tooltip-leftin .3s linear}.atomicat-tooltip{width:150px;background-color:#555;color:#fff;animation-duration:.3s;opacity:0;display:block;color:#fff;border-radius:4px;padding:10px;position:absolute;z-index:-1;line-height:1.3;cursor:pointer;text-align:left}.atomicat-tooltip::after{border-width:5px;content:"";position:absolute;border-style:solid}.atomicat-tooltip-top{bottom:100%;left:50%;-webkit-transform:translateX(-50%);-ms-transform:translateX(-50%);transform:translateX(-50%);margin:0 auto 10px auto}.atomicat-tooltip-top::after{top:100%;left:calc(50% - 5px);border-top-color:#555;margin-top:0;border-color:#000 transparent transparent transparent;border-top-color:#555}.atomicat-tooltip-right{top:50%;left:100%;-webkit-transform:translateY(-50%);-ms-transform:translateY(-50%);transform:translateY(-50%);-webkit-transition:all .3s ease-in-out;transition:all .3s ease-in-out;margin-left:10px;border-color:transparent #000 transparent transparent}.atomicat-tooltip-right::after{top:calc(50% - 5px);right:100%;border-color:transparent #000 transparent transparent;border-right-color:#555}.atomicat-tooltip-bottom{top:100%;left:50%;-webkit-transform:translateX(-50%);-ms-transform:translateX(-50%);transform:translateX(-50%);margin:10px auto 0 auto}.atomicat-tooltip-bottom::after{left:calc(50% - 5px);margin-top:0;bottom:100%;border-color:transparent transparent #000 transparent;border-bottom-color:#555}.atomicat-tooltip-left{top:50%;right:100%;-webkit-transform:translateY(-50%);-ms-transform:translateY(-50%);transform:translateY(-50%);margin-right:10px}.atomicat-tooltip-left::after{top:calc(50% - 5px);left:100%;border-color:transparent transparent transparent #000;border-left-color:#555}@keyframes atomicat-tooltip-rightin{0%{opacity:0;left:105%}100%{opacity:1;left:100%}}@keyframes atomicat-tooltip-leftin{0%{opacity:0;right:105%}100%{opacity:1;right:100%}}@keyframes atomicat-tooltip-topin{0%{opacity:0;bottom:110%}100%{opacity:1;bottom:100%}}@keyframes atomicat-tooltip-bottomin{0%{opacity:0;top:110%}100%{opacity:1;top:100%}}.a-video{overflow:hidden}.a-video iframe{height:100%;width:100%}.a-v-o-c{position:relative;width:100%;height:100%;overflow:hidden}.a-v-o{position:absolute;top:0;left:0;width:100%;height:100%;background-size:cover;background-position:center;background-repeat:no-repeat;cursor:pointer;display:flex;align-items:center;justify-content:center;z-index:2;transition:all .3s ease}.a-v-o:hover svg{transform:scale(1.1)}.a-v-p-b{width:80px;height:80px}@media (max-width:768px){.a-v-p-b{width:60px;height:60px}}.atomicat-text *{word-break:break-word}.atomicat-text ul{padding-left:revert}.atomicat-text{white-space:pre-line;color:var(--a-text-color,var(--a-pry-color,var(--a-g-content-color,inherit)))}.atomicat-text :is(h1,h2,h3,h4,h5,h6){color:var(--a-heading-color,var(--a-pry-color,var(--a-g-title-color,inherit)))}.atomicat-text p{font-size:16px;font-weight:400}.a-e-cont p a{color:#00f;text-decoration:underline}.atomicat-heading-title{white-space:pre-line}.atomicat-heading-title h1{font-size:48px;font-weight:700}.atomicat-heading-title h2{font-size:36px;font-weight:600}.atomicat-heading-title h3{font-size:24px;font-weight:500}.atomicat-delay{display:none}</style><style>.a-b-cont{overflow:hidden}</style>
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TNLBBT5G"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
 
+<!-- ╔═══ DISPOSITIVO: coluna mobile centralizada (PC/tablet = mesmo layout do celular) ═══╗ -->
+<div class="device">
 
+<!-- ═══════════ [TOPBAR] barra de seleção — substitui o header CNN da versão ES ═══════════ -->
+<div class="topbar">
+  Vous et quelques personnes de <b class="city">Paris</b> avez été sélectionnés pour voir cette présentation.
+</div>
 
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin=""><link rel="preload" as="font" href="https://fonts.gstatic.com/s/poppins/v24/pxiEyp8kv8JHgFVrJJfecg.woff2" crossorigin=""><link rel="preload" as="font" href="https://fonts.gstatic.com/s/poppins/v24/pxiByp8kv8JHgFVrLEj6Z1xlFQ.woff2" crossorigin=""><link rel="preload" as="font" href="https://fonts.gstatic.com/s/poppins/v24/pxiByp8kv8JHgFVrLGT9Z1xlFQ.woff2" crossorigin=""><link rel="preload" as="font" href="https://fonts.gstatic.com/s/roboto/v51/KFO7CnqEu92Fr1ME7kSn66aGLdTylUAMa3yUBA.woff2" crossorigin=""><link rel="preload" as="font" href="https://fonts.gstatic.com/s/montserrat/v31/JTUHjIg1_i6t8kCHKm4532VJOt5-QNFgpCu173w5aXo.woff2" crossorigin="">
+<div class="wrap">
 
+  <!-- ═══════════ [HEADLINE] ═══════════
+       Se a headline virar teste A/B dentro do VTurb (como foi feito na cnn-vsl),
+       basta apagar o <h1> e o <p class="disclaimer"> abaixo. -->
+  <h1 class="headline">Le vinaigre de cidre au citron <span class="red">a un effet bariatrique</span>, mais seulement s&rsquo;il est <span class="red">préparé de la manière suivante</span></h1>
+  <p class="disclaimer">Regardez cette présentation jusqu&rsquo;à la fin. Elle sera retirée le <span class="red today">&mdash;</span></p>
 
+  <!-- ═══════════ [VIDEO] ═══════════ -->
+  <div class="vsl">
+    <!-- caixa do vídeo: proporção 3:4 reservada p/ evitar layout shift (CLS) quando o player carrega -->
+    <div style="width:100%;max-width:400px;margin:0 auto;aspect-ratio:3/4">
+    <vturb-smartplayer id="ab-COLE_AQUI_O_ID_DO_AB_TEST" style="display:block;margin:0 auto;width:100%"></vturb-smartplayer> <script type="text/javascript">
+var s=document.createElement("script"); s.src="https://scripts.converteai.net/65eee9f4-ec2d-46b0-a2b3-9b1ecf0653c2/ab-test/COLE_AQUI_O_ID_DO_AB_TEST/player.js", s.async=!0,document.head.appendChild(s);
+</script>
+    </div>
 
+    <!-- [VIEWERS] número automático, só aumenta -->
+    <p class="viewers"><b id="viewers">430</b> personnes regardent en ce moment&hellip;</p>
+  </div>
+</div>
 
+<section class="comments">
+  <div class="wrap">
+    <h3 class="comments-title">Commentaires</h3>
+    <div id="fb-comments">
+      <div class="comments-container">
 
+      <!-- escrever comentário (decorativo) -->
+      <div class="cmt-write">
+        <div class="cw-av"></div>
+        <div class="cw-box"><span>Écrivez un commentaire&hellip;</span><svg viewBox="0 0 24 24"><path d="M12 2C6.5 2 2 6.5 2 12s4.5 10 10 10 10-4.5 10-10S17.5 2 12 2zm0 18c-4.4 0-8-3.6-8-8s3.6-8 8-8 8 3.6 8 8-3.6 8-8 8zm-3.5-9c.8 0 1.5-.7 1.5-1.5S9.3 8 8.5 8 7 8.7 7 9.5 7.7 11 8.5 11zm7 0c.8 0 1.5-.7 1.5-1.5S16.3 8 15.5 8 14 8.7 14 9.5s.7 1.5 1.5 1.5zM12 18c2.3 0 4.3-1.5 5-3.5H7c.7 2 2.7 3.5 5 3.5z"/></svg></div>
+      </div>
 
+      <!-- Camille D. — solte as fotos em sglfr/img/av-1..6.webp; sem elas cai no avatar neutro -->
+      <div class="comment">
+        <img class="user-avatar" src="img/av-1.webp" alt="" width="48" height="48" data-fallback>
+        <div class="comment-data">
+          <div class="user user-background">
+            <p class="name">Camille D.</p>
+            <p class="text">Heureusement que j&rsquo;ai regardé jusqu&rsquo;à la fin&hellip; ça a tout changé pour moi&nbsp;!!</p>
+          </div>
+          <div class="buttons"><like>J&rsquo;aime</like><span>·</span><answer>Répondre</answer><span>·</span><time>1 h</time></div>
+        </div>
+        <likes>13</likes>
+      </div>
 
+      <!-- resposta: Julie M. -->
+      <div class="comment answer">
+        <img class="user-avatar" src="img/av-2.webp" alt="" width="48" height="48" data-fallback>
+        <div class="comment-data">
+          <div class="user user-background">
+            <p class="name">Julie M.</p>
+            <p class="text">Moi aussi j&rsquo;étais à deux doigts de quitter la vidéo 😅 heureusement que je suis restée</p>
+          </div>
+          <div class="buttons"><like>J&rsquo;aime</like><span>·</span><answer>Répondre</answer><span>·</span><time>1 h</time></div>
+        </div>
+        <likes>15</likes>
+      </div>
 
-  <script src="https://scripts.converteai.net/lib/js/smartplayer-wc/v4/smartplayer.js" id="vturb-smartplayer-js" fetchpriority="high"></script></head><body><noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TNLBBT5G" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript><div class="a-b-cont"><div class="a-u-2 atomicat-container-0aade36 a-b-o-cont--legacy-margin a-b-o-cont"><style>.atomicat-container-0aade36>.a-o-cont{padding-top:16px;padding-bottom:16px}.atomicat-container-0aade36>.a-o-cont>.a-cont{flex-direction:row}.a-b-cont .atomicat-container-0aade36.a-b-o-cont{background:#de2800;background-size:cover;background-repeat:no-repeat;background-position:center}</style><div class="a-o-cont a-cont-b"><div class="a-i-cont a-cont"><div class="a-b-o-cont atomicat-container-4afd633 a-b-o-cont--legacy-margin"><!-- container - mxjxnc --><style>.atomicat-container-4afd633>.a-o-cont>.a-cont{flex-direction:column}.a-b-cont .atomicat-container-4afd633.a-b-o-cont{background-size:cover;background-repeat:no-repeat;background-position:center;width:100%}@media screen and (max-width:480px){.a-b-cont .atomicat-container-4afd633.a-b-o-cont{width:100%}}</style><div class="a-cont-f-w a-o-cont a-s-d-49i8gm"><div class="a-cont a-s-d-fwle3o a-i-cont"><div class="a-c-cont a-r a-s-d-91f5ys a-c-cont-fa097fd"><style>.a-e-cont.atomicat-heading-title-fa097fd p:hover{-webkit-text-fill-color:unset}.a-e-cont.atomicat-heading-title-fa097fd p{font-size:20px;line-height:36px;text-align:center;color:#fff}@media screen and (max-width:480px){.a-e-cont.atomicat-heading-title-fa097fd p{font-size:16px}}</style><div class="atomicat-text-fa097fd atomicat-heading-title-fa097fd a-e-cont atomicat-element-container-fa097fd a-r atomicat-text"><!-- text - vkrsut --><p class="a-i-e-cont">Vous et quelques personnes de <strong><span class="atomicat-customer-city">Paris</span></strong> avez été sélectionnés pour voir cette présentation.</p></div></div></div></div></div></div></div></div><div class="a-b-o-cont a-b-o-cont--legacy-margin atomicat-container-e3c6d80 a-s-d-2gmt0r a-u-1"><!-- container - o1ifgk --><style>.atomicat-container-e3c6d80>.a-o-cont{padding-top:3%;padding-bottom:3%}.atomicat-container-e3c6d80>.a-o-cont>.a-cont{flex-direction:row}.a-b-cont .atomicat-container-e3c6d80.a-b-o-cont{background-size:cover;background-repeat:no-repeat;background-position:center}</style><div class="a-o-cont a-cont-b a-s-d-jqyb6n"><div class="a-i-cont a-cont"><div class="atomicat-container-434e1a4 a-b-o-cont--legacy-margin a-b-o-cont"><style>.atomicat-container-434e1a4>.a-o-cont>.a-cont{flex-direction:column}.a-b-cont .atomicat-container-434e1a4.a-b-o-cont{background-size:cover;background-repeat:no-repeat;background-position:center;width:100%}@media screen and (max-width:480px){.a-b-cont .atomicat-container-434e1a4.a-b-o-cont{width:100%}}</style><div class="a-s-d-qb0yvl a-cont-f-w a-o-cont"><div class="a-cont a-i-cont"><div class="a-s-d-4qg63m a-c-cont-f04aa7b a-r a-c-cont"><style>.a-e-cont.atomicat-heading-title-f04aa7b h3:hover{-webkit-text-fill-color:unset}.a-e-cont.atomicat-heading-title-f04aa7b h3{text-align:center;font-weight:600}@media screen and (max-width:480px){.a-e-cont.atomicat-heading-title-f04aa7b h3{font-weight:600;font-size:24px}}</style><div class="atomicat-element-container-f04aa7b atomicat-heading-title-f04aa7b atomicat-text-f04aa7b a-e-cont a-r atomicat-heading-title"><!-- text - 0qs2bt --><h3 class="a-i-e-cont"><p>Le vinaigre de cidre au citron <span style="color:#de2800">a un effet bariatrique</span>, mais seulement s'il est <span style="color:#de2800">préparé de la manière suivante</span></p></h3></div></div><div class="a-c-cont a-r a-c-cont-1c8b6e2 a-s-d-dsruo9"><style>.a-e-cont.atomicat-heading-title-1c8b6e2 h6:hover{-webkit-text-fill-color:unset}.a-e-cont.atomicat-heading-title-1c8b6e2 h6{font-weight:400;font-size:24px;line-height:36px;text-align:center}@media screen and (max-width:480px){.a-e-cont.atomicat-heading-title-1c8b6e2 h6{font-weight:400;font-size:16px;text-align:center}}.a-c-cont-1c8b6e2>.a-e-cont{padding-top:2%}</style><div class="atomicat-heading-title a-r atomicat-element-container-1c8b6e2 atomicat-text-1c8b6e2 a-e-cont atomicat-heading-title-1c8b6e2"><!-- text - d6hir1 --><h6 class="a-i-e-cont"><p>Regardez cette présentation jusqu’à la fin. Elle sera retirée le <span style="color:#de2800"><span class="atomicat-hoje">11/09/2026</span></span></p></h6></div></div><div class="a-r a-c-cont a-c-cont-7295858"><style>.a-video-7295858{margin-right:auto;margin-left:unset}.a-video-7295858 iframe{margin-right:auto;margin-left:unset}.a-c-cont-7295858{width:100%}.a-c-cont-7295858>.a-e-cont{padding-top:2%}</style><div class="a-video-7295858 a-s-d-ru0rur a-r a-video atomicat-element-container-7295858 atomicat-video a-e-cont"><!-- video - 5ayibc --><div style="aspect-ratio:1.77777"><vturb-smartplayer id="ab-COLE_AQUI_O_ID_DO_AB_TEST" style="display:block;margin:0 auto;width:100%"></vturb-smartplayer><script type="text/javascript">var s=document.createElement("script"); s.src="https://scripts.converteai.net/65eee9f4-ec2d-46b0-a2b3-9b1ecf0653c2/ab-test/COLE_AQUI_O_ID_DO_AB_TEST/player.js", s.async=!0,document.head.appendChild(s);</script></div></div></div><div class="a-c-cont-c5ac10d a-r a-s-d-a6rooy a-c-cont"><style>.a-e-cont.atomicat-heading-title-c5ac10d p:hover{-webkit-text-fill-color:unset}.a-e-cont.atomicat-heading-title-c5ac10d p{text-align:center}.a-c-cont-c5ac10d>.a-e-cont{padding-top:16px}</style><div class="atomicat-text a-r atomicat-text-c5ac10d atomicat-heading-title-c5ac10d atomicat-element-container-c5ac10d a-e-cont"><p class="a-i-e-cont"><span class="atomicat-random" data-min="400" data-max="700">664</span> personnes regardent en ce moment…</p></div></div></div></div></div></div></div></div><div class="a-s-d-a4tdpl a-b-o-cont atomicat-container-3e74720 a-b-o-cont--legacy-margin"><style>.atomicat-container-3e74720>.a-o-cont{padding-top:3%;padding-bottom:3%}.atomicat-container-3e74720>.a-o-cont>.a-cont{flex-direction:row}.a-b-cont .atomicat-container-3e74720.a-b-o-cont{background-size:cover;background-repeat:no-repeat;background-position:center}</style><div class="a-s-d-8m49lo a-o-cont a-cont-b"><div class="a-s-d-mdagxj a-i-cont a-cont"><div class="atomicat-container-b996e3a a-b-o-cont a-b-o-cont--legacy-margin a-u-3"><!-- container - lzaz1e --><style>.atomicat-container-b996e3a>.a-o-cont>.a-cont{flex-direction:column}.a-b-cont .atomicat-container-b996e3a.a-b-o-cont{background-size:cover;background-repeat:no-repeat;background-position:center;width:100%}@media screen and (max-width:480px){.a-b-cont .atomicat-container-b996e3a.a-b-o-cont{width:100%}}</style><div class="a-o-cont a-cont-f-w a-s-d-yep98u"><div class="a-i-cont a-cont"><div class="a-c-cont-6acc27e a-r a-c-cont"><style></style><div class="atomicat-comment atomicat-element-container-6acc27e a-r a-e-cont a-co-6acc27e a-co a-s-d-8tdc26"><div spellcheck="false" class="flexBox a-fb a-i-e-cont a-co"><div class="a-co-h"><div class="a-co-hc"><p class="a-co-ht">Affichage de 6 commentaires sur 322</p></div></div><div class="flexBox"><div class="a-fb-parent"><div class="a-fb-thumb"><img src="data:image/svg+xml;utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 48 48'%3E%3Ccircle cx='24' cy='24' r='24' fill='%23d8dade'/%3E%3Ccircle cx='24' cy='19' r='8' fill='%23b0b3b8'/%3E%3Cpath d='M8 46c2-9 8-13 16-13s14 4 16 13z' fill='%23b0b3b8'/%3E%3C/svg%3E" alt="" class="a-fb-thumb-img" width="70" height="70"></div><div class="a-fb-info"><div class="a-fb-text"><div class="a-fb-user">Camille D.</div><div class="a-fb-comm"><span>Heureusement que j’ai regardé jusqu’à la fin… ça a tout changé pour moi !!</span></div></div><div class="a-fb-misc"><div class="a-fb-misc-left"><div class="a-fb-misc-txt">Aimer</div><p class="a-fb-dot">·</p><div class="a-fb-misc-txt">Répondre</div><div class="a-fb-likes"><p class="a-fb-dot">·</p><img class="a-fb-like-img" src="data:image/svg+xml;utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Ccircle cx='8' cy='8' r='8' fill='%231877f2'/%3E%3Cpath d='M4.4 7.2h1.5v4.4H4.4zM6.6 7.2h1.7l.5-2c.1-.5.5-.8 1-.8.5 0 .8.4.7.9l-.3 1.4h1.6c.6 0 1 .5.9 1l-.6 2.8c-.1.5-.5.8-1 .8H6.6z' fill='%23fff'/%3E%3C/svg%3E" alt="likes"><span>13</span></div><p class="a-fb-dot">·</p><div class="a-fb-time">1<!-- --><!-- --> h</div></div></div></div></div><div class="a-fb-children"><div><div class="a-fb-parent"><div class="a-fb-thumb a-fb-thumb-child"><img src="data:image/svg+xml;utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 48 48'%3E%3Ccircle cx='24' cy='24' r='24' fill='%23d8dade'/%3E%3Ccircle cx='24' cy='19' r='8' fill='%23b0b3b8'/%3E%3Cpath d='M8 46c2-9 8-13 16-13s14 4 16 13z' fill='%23b0b3b8'/%3E%3C/svg%3E" alt="" class="a-fb-thumb-img" width="48" height="48"></div><div class="a-fb-info"><div class="a-fb-text"><div class="a-fb-user">Julie M.</div><div class="a-fb-comm"><span>Moi aussi j’étais à deux doigts de quitter la vidéo 😅 heureusement que je suis restée</span></div></div><div class="a-fb-misc"><div class="a-fb-misc-left"><div class="a-fb-misc-txt">Aimer</div><p class="a-fb-dot">·</p><div class="a-fb-misc-txt">Répondre</div><div class="a-fb-likes"><p class="a-fb-dot">·</p><img class="a-fb-like-img" src="data:image/svg+xml;utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Ccircle cx='8' cy='8' r='8' fill='%231877f2'/%3E%3Cpath d='M4.4 7.2h1.5v4.4H4.4zM6.6 7.2h1.7l.5-2c.1-.5.5-.8 1-.8.5 0 .8.4.7.9l-.3 1.4h1.6c.6 0 1 .5.9 1l-.6 2.8c-.1.5-.5.8-1 .8H6.6z' fill='%23fff'/%3E%3C/svg%3E" alt="likes"><span>15</span></div><p class="a-fb-dot">·</p><div class="a-fb-time">1<!-- --><!-- --> h</div></div></div></div></div></div></div></div><div class="flexBox"><div class="a-fb-parent"><div class="a-fb-thumb"><img src="data:image/svg+xml;utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 48 48'%3E%3Ccircle cx='24' cy='24' r='24' fill='%23d8dade'/%3E%3Ccircle cx='24' cy='19' r='8' fill='%23b0b3b8'/%3E%3Cpath d='M8 46c2-9 8-13 16-13s14 4 16 13z' fill='%23b0b3b8'/%3E%3C/svg%3E" alt="" class="a-fb-thumb-img" width="70" height="70"></div><div class="a-fb-info"><div class="a-fb-text"><div class="a-fb-user">Sophie L.</div><div class="a-fb-comm"><span>Il y a quelqu’un de<span class="atomicat-customer-city">Paris</span> ici qui a testé ? Ça marche vraiment ?</span></div></div><div class="a-fb-misc"><div class="a-fb-misc-left"><div class="a-fb-misc-txt">Aimer</div><p class="a-fb-dot">·</p><div class="a-fb-misc-txt">Répondre</div><div class="a-fb-likes"><p class="a-fb-dot">·</p><img class="a-fb-like-img" src="data:image/svg+xml;utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Ccircle cx='8' cy='8' r='8' fill='%231877f2'/%3E%3Cpath d='M4.4 7.2h1.5v4.4H4.4zM6.6 7.2h1.7l.5-2c.1-.5.5-.8 1-.8.5 0 .8.4.7.9l-.3 1.4h1.6c.6 0 1 .5.9 1l-.6 2.8c-.1.5-.5.8-1 .8H6.6z' fill='%23fff'/%3E%3C/svg%3E" alt="likes"><span>33</span></div><p class="a-fb-dot">·</p><div class="a-fb-time">1<!-- --><!-- --> h</div></div></div></div></div><div class="a-fb-children"><div><div class="a-fb-parent"><div class="a-fb-thumb a-fb-thumb-child"><img src="data:image/svg+xml;utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 48 48'%3E%3Ccircle cx='24' cy='24' r='24' fill='%23d8dade'/%3E%3Ccircle cx='24' cy='19' r='8' fill='%23b0b3b8'/%3E%3Cpath d='M8 46c2-9 8-13 16-13s14 4 16 13z' fill='%23b0b3b8'/%3E%3C/svg%3E" alt="" class="a-fb-thumb-img" width="48" height="48"></div><div class="a-fb-info"><div class="a-fb-text"><div class="a-fb-user">Laura B.</div><div class="a-fb-comm"><span>Oui, je suis de <span class="atomicat-customer-city">Paris</span> et j’ai testé ! J’étais sceptique aussi mais ça marche vraiment… -5kg en 2 semaines</span></div></div><div class="a-fb-misc"><div class="a-fb-misc-left"><div class="a-fb-misc-txt">Aimer</div><p class="a-fb-dot">·</p><div class="a-fb-misc-txt">Répondre</div><div class="a-fb-likes"><p class="a-fb-dot">·</p><img class="a-fb-like-img" src="data:image/svg+xml;utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Ccircle cx='8' cy='8' r='8' fill='%231877f2'/%3E%3Cpath d='M4.4 7.2h1.5v4.4H4.4zM6.6 7.2h1.7l.5-2c.1-.5.5-.8 1-.8.5 0 .8.4.7.9l-.3 1.4h1.6c.6 0 1 .5.9 1l-.6 2.8c-.1.5-.5.8-1 .8H6.6z' fill='%23fff'/%3E%3C/svg%3E" alt="likes"><span>1</span></div><p class="a-fb-dot">·</p><div class="a-fb-time">1<!-- --><!-- --> h</div></div></div></div></div></div><div><div class="a-fb-parent"><div class="a-fb-thumb-child a-fb-thumb"><img src="data:image/svg+xml;utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 48 48'%3E%3Ccircle cx='24' cy='24' r='24' fill='%23d8dade'/%3E%3Ccircle cx='24' cy='19' r='8' fill='%23b0b3b8'/%3E%3Cpath d='M8 46c2-9 8-13 16-13s14 4 16 13z' fill='%23b0b3b8'/%3E%3C/svg%3E" alt="" class="a-fb-thumb-img" width="48" height="48"></div><div class="a-fb-info"><div class="a-fb-text"><div class="a-fb-user">Sophie L.</div><div class="a-fb-comm"><span>Merci ! Je vais tester alors 🙏🙏</span></div></div><div class="a-fb-misc"><div class="a-fb-misc-left"><div class="a-fb-misc-txt">Aimer</div><p class="a-fb-dot">·</p><div class="a-fb-misc-txt">Répondre</div><div class="a-fb-likes"><p class="a-fb-dot">·</p><img class="a-fb-like-img" src="data:image/svg+xml;utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Ccircle cx='8' cy='8' r='8' fill='%231877f2'/%3E%3Cpath d='M4.4 7.2h1.5v4.4H4.4zM6.6 7.2h1.7l.5-2c.1-.5.5-.8 1-.8.5 0 .8.4.7.9l-.3 1.4h1.6c.6 0 1 .5.9 1l-.6 2.8c-.1.5-.5.8-1 .8H6.6z' fill='%23fff'/%3E%3C/svg%3E" alt="likes"><span>15</span></div><p class="a-fb-dot">·</p><div class="a-fb-time">1<!-- --><!-- --> h</div></div></div></div></div></div></div></div><div class="flexBox"><div class="a-fb-parent"><div class="a-fb-thumb"><img src="data:image/svg+xml;utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 48 48'%3E%3Ccircle cx='24' cy='24' r='24' fill='%23d8dade'/%3E%3Ccircle cx='24' cy='19' r='8' fill='%23b0b3b8'/%3E%3Cpath d='M8 46c2-9 8-13 16-13s14 4 16 13z' fill='%23b0b3b8'/%3E%3C/svg%3E" alt="" class="a-fb-thumb-img" width="70" height="70"></div><div class="a-fb-info"><div class="a-fb-text"><div class="a-fb-user">Nathalie R.</div><div class="a-fb-comm"><span>Franchement incroyable… j’ai commencé il y a quelques jours et ça fonctionne déjà 👏👏</span></div></div><div class="a-fb-misc"><div class="a-fb-misc-left"><div class="a-fb-misc-txt">Aimer</div><p class="a-fb-dot">·</p><div class="a-fb-misc-txt">Répondre</div><div class="a-fb-likes"><p class="a-fb-dot">·</p><img class="a-fb-like-img" src="data:image/svg+xml;utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Ccircle cx='8' cy='8' r='8' fill='%231877f2'/%3E%3Cpath d='M4.4 7.2h1.5v4.4H4.4zM6.6 7.2h1.7l.5-2c.1-.5.5-.8 1-.8.5 0 .8.4.7.9l-.3 1.4h1.6c.6 0 1 .5.9 1l-.6 2.8c-.1.5-.5.8-1 .8H6.6z' fill='%23fff'/%3E%3C/svg%3E" alt="likes"><span>23</span></div><p class="a-fb-dot">·</p><div class="a-fb-time">1<!-- --><!-- --> h</div></div></div></div></div></div></div></div></div></div></div></div></div></div></div><div class="a-b-o-cont--legacy-margin atomicat-container-1d4e2d5 a-s-d-kwexn0 a-b-o-cont"><style>.atomicat-container-1d4e2d5>.a-o-cont{padding-top:32px;padding-bottom:32px}.atomicat-container-1d4e2d5>.a-o-cont>.a-cont{flex-direction:row}.a-b-cont .atomicat-container-1d4e2d5.a-b-o-cont{background:#292929;background-size:cover;background-repeat:no-repeat;background-position:center}</style><div class="a-cont-b a-s-d-anh4cn a-o-cont"><div class="a-s-d-k3ksu9 a-cont a-i-cont"><div class="a-b-o-cont--legacy-margin atomicat-container-e4b1621 a-b-o-cont"><!-- container - fdjsy4 --><style>.atomicat-container-e4b1621>.a-o-cont>.a-cont{flex-direction:column}.a-b-cont .atomicat-container-e4b1621.a-b-o-cont{background-size:cover;background-repeat:no-repeat;background-position:center;width:100%}@media screen and (max-width:480px){.a-b-cont .atomicat-container-e4b1621.a-b-o-cont{width:100%}}</style><div class="a-cont-f-w a-o-cont a-s-d-u7qnan"><div class="a-i-cont a-cont a-s-d-0zqbcv"><div class="a-c-cont a-c-cont-154e93f a-r"><style>.a-c-cont-154e93f>.a-e-cont.a-ft-154e93f footer{color:#fff;font-weight:400;font-size:16px}</style><div class="a-s-d-1z7zzr a-ft a-e-cont a-r atomicat-footer a-ft-154e93f atomicat-element-container-154e93f"><!-- footer - 2g7ga9 --><footer class="a-i-e-cont a-g-s-t"><p class="a-ft-i">Copyright <span class="atomicat-ano">2026</span> - Stylo M. ®</p><p class="a-ft-i">Tous droits réservés</p><div class="a-ft-i"><a href="https://sante24h.site/app/conditions/" style="color:#fff;text-decoration:underline">Conditions d’utilisation</a> · <a href="https://sante24h.site/app/confidentialite/" style="color:#fff;text-decoration:underline">Politique de confidentialité</a> · <a href="https://sante24h.site/app/remboursement/" style="color:#fff;text-decoration:underline">Politique de remboursement</a></div><p class="a-ft-i" style="font-size:13px;line-height:1.6;opacity:.8">Contenu numérique à visée éducative. Ne remplace pas l’avis d’un professionnel de santé. Résultats pouvant varier d’une personne à l’autre.<br>Ce site n’est pas affilié à Facebook, Inc. FACEBOOK est une marque déposée de META PLATFORMS, Inc.<br>Contact : contact.stylomaisonapp@gmail.com</p></footer></div></div></div></div></div></div></div></div></div>
+      <!-- Sophie L. -->
+      <div class="comment">
+        <img class="user-avatar" src="img/av-3.webp" alt="" width="48" height="48" data-fallback>
+        <div class="comment-data">
+          <div class="user user-background">
+            <p class="name">Sophie L.</p>
+            <p class="text">Il y a quelqu&rsquo;un de <span class="city">Paris</span> ici qui a testé&nbsp;? Ça marche vraiment&nbsp;?</p>
+          </div>
+          <div class="buttons"><like>J&rsquo;aime</like><span>·</span><answer>Répondre</answer><span>·</span><time>1 h</time></div>
+        </div>
+        <likes>33</likes>
+      </div>
 
+      <!-- resposta: Laura B. -->
+      <div class="comment answer">
+        <img class="user-avatar" src="img/av-4.webp" alt="" width="48" height="48" data-fallback>
+        <div class="comment-data">
+          <div class="user user-background">
+            <p class="name">Laura B.</p>
+            <p class="text">Oui, je suis de <span class="city">Paris</span> et j&rsquo;ai testé&nbsp;! J&rsquo;étais sceptique aussi mais ça marche vraiment&hellip;</p>
+          </div>
+          <div class="buttons"><like>J&rsquo;aime</like><span>·</span><answer>Répondre</answer><span>·</span><time>1 h</time></div>
+        </div>
+        <likes>4</likes>
+      </div>
 
+      <!-- resposta: Sophie L. -->
+      <div class="comment answer">
+        <img class="user-avatar" src="img/av-3.webp" alt="" width="48" height="48" data-fallback>
+        <div class="comment-data">
+          <div class="user user-background">
+            <p class="name">Sophie L.</p>
+            <p class="text">Merci&nbsp;! Je vais tester alors 🙏🙏</p>
+          </div>
+          <div class="buttons"><like>J&rsquo;aime</like><span>·</span><answer>Répondre</answer><span>·</span><time>1 h</time></div>
+        </div>
+        <likes>15</likes>
+      </div>
 
+      <!-- Nathalie R. -->
+      <div class="comment">
+        <img class="user-avatar" src="img/av-6.webp" alt="" width="48" height="48" data-fallback>
+        <div class="comment-data">
+          <div class="user user-background">
+            <p class="name">Nathalie R.</p>
+            <p class="text">Franchement incroyable&hellip; j&rsquo;ai commencé il y a quelques jours et ça fonctionne déjà 👏👏</p>
+          </div>
+          <div class="buttons"><like>J&rsquo;aime</like><span>·</span><answer>Répondre</answer><span>·</span><time>1 h</time></div>
+        </div>
+        <likes>23</likes>
+      </div>
 
+      </div>
+    </div>
+  </div>
+</section>
 
+<footer class="site-footer">
+  <p>Copyright <span class="year">2026</span> &mdash; Stylo Maison App</p>
+  <p>Tous droits réservés</p>
+  <div class="legal-nav">
+    <a href="https://sante24h.site/app/conditions/">Conditions d&rsquo;utilisation</a> ·
+    <a href="https://sante24h.site/app/confidentialite/">Politique de confidentialité</a> ·
+    <a href="https://sante24h.site/app/remboursement/">Politique de remboursement</a>
+  </div>
+  <p class="fine">
+    Contenu numérique à visée éducative. Ne remplace pas l&rsquo;avis d&rsquo;un professionnel de santé.
+    Résultats pouvant varier d&rsquo;une personne à l&rsquo;autre.<br>
+    Ce site n&rsquo;est pas affilié à Facebook, Inc. FACEBOOK est une marque déposée de META PLATFORMS, Inc.<br>
+    Contact&nbsp;: contact.stylomaisonapp@gmail.com
+  </p>
+</footer>
 
+</div><!-- ╚═══ /.device ═══╝ -->
 
-
-
-
-
-
-
-
-
+<!-- ═══════════ [TRACKING] ═══════════ -->
+<script>
+  // UTMify — o dashboard do funil ES é 6a2dc2d082a16462e33bd463. O hub tem DEST_FR_UTMIFY
+  // separado (worker-hub.js:183), então o dashboard FR provavelmente é OUTRO. Confirme no painel.
+  window.pixelId = "COLE_AQUI_O_PIXELID_UTMIFY_FR";
+  var a = document.createElement("script");
+  a.setAttribute("async", "");
+  a.setAttribute("defer", "");
+  a.setAttribute("src", "https://cdn.utmify.com.br/scripts/pixel/pixel.js");
+  document.head.appendChild(a);
+</script>
+<script
+  src="https://cdn.utmify.com.br/scripts/utms/latest.js"
+  data-utmify-prevent-xcod-sck
+  data-utmify-prevent-subids
+  async
+  defer
+></script>
 
 <script>
-(function(){
-  function setToday(){
-    var d = new Date();
-    var dd = String(d.getDate()).padStart(2,'0');
-    var mm = String(d.getMonth()+1).padStart(2,'0');
-    var yyyy = d.getFullYear();
-    var formatted = dd + '/' + mm + '/' + yyyy;
-    document.querySelectorAll('.atomicat-hoje').forEach(function(el){ el.textContent = formatted; });
-  }
-  function setCity(city){
-    if(!city) return;
-    document.querySelectorAll('.atomicat-customer-city').forEach(function(el){ el.textContent = city; });
-  }
-  function setRandom(){
-    document.querySelectorAll('.atomicat-random').forEach(function(el){
-      var min = parseInt(el.getAttribute('data-min') || '0', 10);
-      var max = parseInt(el.getAttribute('data-max') || '0', 10);
-      if (!(max > min)) return;
-      el.textContent = String(Math.floor(Math.random() * (max - min + 1)) + min);
+  // avatar de fallback: se a foto do comentário não existir, desenha um avatar neutro
+  (function(){
+    var NEUTRO = "data:image/svg+xml;utf8," + encodeURIComponent(
+      '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48">' +
+      '<circle cx="24" cy="24" r="24" fill="#dcdde1"/>' +
+      '<circle cx="24" cy="19" r="8" fill="#b0b3b8"/>' +
+      '<path d="M8 46c2-9 8-13 16-13s14 4 16 13z" fill="#b0b3b8"/></svg>');
+    document.querySelectorAll('img[data-fallback]').forEach(function(img){
+      img.addEventListener('error', function(){ if(img.src !== NEUTRO) img.src = NEUTRO; });
+      if (img.complete && img.naturalWidth === 0) img.src = NEUTRO;
     });
-  }
-  function setAno(){
-    var ano = String(new Date().getFullYear());
-    document.querySelectorAll('.atomicat-ano').forEach(function(el){ el.textContent = ano; });
-  }
-  setToday();
-  setAno();
-  setRandom();
-  fetch('https://ipwho.is/')
-    .then(function(r){ return r.json(); })
-    .then(function(data){
-      if(data && data.success !== false && data.city){ setCity(data.city); }
-    })
-    .catch(function(){});
+  })();
+
+  // data de hoje na escassez + ano do rodapé
+  (function(){
+    var d = new Date();
+    var hoje = String(d.getDate()).padStart(2,'0') + '/' + String(d.getMonth()+1).padStart(2,'0') + '/' + d.getFullYear();
+    document.querySelectorAll('.today').forEach(function(el){ el.textContent = hoje; });
+    document.querySelectorAll('.year').forEach(function(el){ el.textContent = d.getFullYear(); });
+  })();
+
+  // cidade do visitante (geo por IP) — o fallback "Paris" já está escrito no HTML
+  (function(){
+    fetch('https://ipwho.is/')
+      .then(function(r){ return r.json(); })
+      .then(function(data){
+        if (data && data.success !== false && data.city) {
+          document.querySelectorAll('.city').forEach(function(el){ el.textContent = data.city; });
+        }
+      })
+      .catch(function(){});
+  })();
+
+  // contador "personnes regardent" — SÓ AUMENTA, do começo até o teto de 1600 (nunca perde views)
+  (function(){
+    var el = document.getElementById('viewers'); if(!el) return;
+    var n = Math.floor(Math.random()*201)+450, MAX = 1600;   // começa 450–650
+    el.textContent = n;
+    function tick(){
+      n += 1 + Math.floor(Math.random()*4);                  // +1..4 (nunca diminui)
+      if (n >= MAX) { el.textContent = MAX; return; }        // chegou em 1600 → para
+      el.textContent = n;
+      setTimeout(tick, 2000 + Math.floor(Math.random()*2500)); // 2–4.5s
+    }
+    setTimeout(tick, 1500);
+  })();
+
+  // UTM forwarding (merge sem sobrescrever) — passa os params da URL pros links
+  (function(){
+    function fwd(root){
+      var qs = window.location.search; if(!qs) return;
+      var src = new URLSearchParams(qs);
+      (root||document).querySelectorAll('a').forEach(function(a){
+        var href = a.getAttribute('href');
+        if(!href || /^(#|javascript:|mailto:|tel:)/i.test(href)) return;
+        try{
+          var u = new URL(href, location.href);
+          src.forEach(function(v,k){ if(!u.searchParams.has(k)) u.searchParams.append(k,v); });
+          a.setAttribute('href', u.toString());
+        }catch(_){}
+      });
+    }
+    fwd(document);
+    new MutationObserver(function(muts){
+      muts.forEach(function(m){ m.addedNodes.forEach(function(n){ if(n.nodeType===1) fwd(n); }); });
+    }).observe(document.documentElement, {childList:true, subtree:true});
+  })();
+</script>
+
+<!-- curtir comentários: clique no "J'aime" → fica azul + soma/subtrai no contador -->
+<script>
+(function(){
+  document.querySelectorAll('#fb-comments like').forEach(function(el){
+    el.addEventListener('click', function(){
+      var was = el.hasAttribute('liked');
+      el.toggleAttribute('liked');
+      var c = el.closest('.comment'), b = c && c.querySelector('likes');
+      if(b){ var n = parseInt((b.textContent||'').replace(/\D/g,''),10)||0; b.textContent = was ? Math.max(0,n-1) : n+1; }
+    });
+  });
 })();
 </script>
 
-</body></html>
+<!-- ═══════════ [NOTIFY] avisa no celular quando clicam no botão de checkout (push via edge function "notify") ═══════════ -->
+<!-- Observe-only: não cancela o clique, não toca no player, não cria global. Dispara só no botão do VTurb. -->
+<script>
+(function(){
+  var NOTIFY = 'https://stsjaebelpztyuplhxvp.supabase.co/functions/v1/notify?e=checkout';
+  var last = 0;
+  document.addEventListener('click', function(e){
+    try{
+      if (e.target.closest && e.target.closest('.smartplayer-anchor-button, .callaction')) {
+        var now = Date.now();
+        if (now - last < 5000) return;   // debounce: 1 disparo a cada 5s (o botão do VTurb dispara vários cliques)
+        last = now;
+        fetch(NOTIFY, { mode:'no-cors', keepalive:true, cache:'no-store' });
+      }
+    }catch(_){}
+  }, { capture:true, passive:true });
+})();
+</script>
+</body>
+</html>
